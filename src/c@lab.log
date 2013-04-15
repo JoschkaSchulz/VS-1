@@ -1,0 +1,32 @@
+c@lab-<0.50.0>-C-1-07: 0te_Nachtricht. C Out: 15.04 23:43:26,982|(0);gesendet 
+c@lab-<0.50.0>-C-1-07: 1te_Nachtricht. C Out: 15.04 23:43:26,983|(1);gesendet 
+c@lab-<0.50.0>-C-1-07: 2te_Nachtricht. C Out: 15.04 23:43:26,984|(2);gesendet 
+c@lab-<0.50.0>-C-1-07: 3te_Nachtricht. C Out: 15.04 23:43:26,985|(3);gesendet 
+c@lab-<0.50.0>-C-1-07: 4te_Nachtricht. C Out: 15.04 23:43:26,986|(4);gesendet 
+5te_Nachtricht um 15.04 23:43:26,987|vergessen zu senden ******
+c@lab-<0.50.0>-C-1-07: 0te_Nachtricht. C Out: 15.04 23:43:26,982|(0); HBQ In: 15.04 23:43:26,982| DLQ In: "15.04 23:43:26,982|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 1te_Nachtricht. C Out: 15.04 23:43:26,983|(1); HBQ In: 15.04 23:43:26,983| DLQ In: "15.04 23:43:26,983|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 0te_Nachtricht. C Out: 15.04 23:46:15,840|(0);gesendet 
+c@lab-<0.50.0>-C-1-07: 1te_Nachtricht. C Out: 15.04 23:46:15,841|(1);gesendet 
+c@lab-<0.50.0>-C-1-07: 2te_Nachtricht. C Out: 15.04 23:46:15,842|(2);gesendet 
+c@lab-<0.50.0>-C-1-07: 3te_Nachtricht. C Out: 15.04 23:46:15,843|(3);gesendet 
+c@lab-<0.50.0>-C-1-07: 4te_Nachtricht. C Out: 15.04 23:46:15,844|(4);gesendet 
+5te_Nachtricht um 15.04 23:46:15,846|vergessen zu senden ******
+c@lab-<0.50.0>-C-1-07: 0te_Nachtricht. C Out: 15.04 23:46:15,840|(0); HBQ In: 15.04 23:46:15,840| DLQ In: "15.04 23:46:15,840|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 1te_Nachtricht. C Out: 15.04 23:46:15,841|(1); HBQ In: 15.04 23:46:15,841| DLQ In: "15.04 23:46:15,841|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 2te_Nachtricht. C Out: 15.04 23:46:15,842|(2); HBQ In: 15.04 23:46:15,843| DLQ In: "15.04 23:46:15,843|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 3te_Nachtricht. C Out: 15.04 23:46:15,843|(3); HBQ In: 15.04 23:46:15,844| DLQ In: "15.04 23:46:15,844|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 4te_Nachtricht. C Out: 15.04 23:46:15,844|(4); HBQ In: 15.04 23:46:15,845| DLQ In: "15.04 23:46:15,845|"gelesen, Terminated = true 
+c@lab-<0.50.0>-C-1-07: 6te_Nachtricht. C Out: 15.04 23:46:15,850|(6);gesendet 
+c@lab-<0.50.0>-C-1-07: 7te_Nachtricht. C Out: 15.04 23:46:15,851|(7);gesendet 
+c@lab-<0.50.0>-C-1-07: 8te_Nachtricht. C Out: 15.04 23:46:15,851|(8);gesendet 
+c@lab-<0.50.0>-C-1-07: 9te_Nachtricht. C Out: 15.04 23:46:15,852|(9);gesendet 
+c@lab-<0.50.0>-C-1-07: 10te_Nachtricht. C Out: 15.04 23:46:15,852|(10);gesendet 
+11te_Nachtricht um 15.04 23:46:15,852|vergessen zu senden ******
+Keine Eintraege vorhanden!gelesen, Terminated = true 
+c@lab-<0.50.0>-C-1-07: 12te_Nachtricht. C Out: 15.04 23:46:15,853|(12);gesendet 
+c@lab-<0.50.0>-C-1-07: 13te_Nachtricht. C Out: 15.04 23:46:15,853|(13);gesendet 
+c@lab-<0.50.0>-C-1-07: 14te_Nachtricht. C Out: 15.04 23:46:15,854|(14);gesendet 
+c@lab-<0.50.0>-C-1-07: 15te_Nachtricht. C Out: 15.04 23:46:15,854|(15);gesendet 
+c@lab-<0.50.0>-C-1-07: 16te_Nachtricht. C Out: 15.04 23:46:15,856|(16);gesendet 
+17te_Nachtricht um 15.04 23:46:15,857|vergessen zu senden ******

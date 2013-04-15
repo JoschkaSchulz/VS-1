@@ -156,12 +156,13 @@ getmessages(Client, Clients, DLQ) ->
 						false ->
 							% wenn nicht, suche nächste Nachricht in DLQ (get_next_message)
 							% Anwort besteht aus dem 4er Tupel {reply, Number, Nachricht, true/false}
-							Antwort = get_next_message(DLQ, Current+1, Max),
-							io:format("Antwort: ~p~n", [Antwort]),
+							io:format("Current: ~p Max: ~p~n", [Current, Max]),
+						  	Antwort = get_next_message(DLQ, Current+1, Max),
+							io:format("Antwort: ~p Max: ~p~n", [Antwort, Max]),
 							Client ! Antwort,
 							% zuletzt gelesene Nachricht des Clients aktualisieren
 							reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-							dict:store(Client, {element(3,Antwort),Timer}, dict:erase(Client, Clients))
+							dict:store(Client, {element(2,Antwort),Timer}, dict:erase(Client, Clients))
 					end;
 				false ->
 					% kennt der Server den Client nicht, schickt er ihm die Nachricht mit kleinster Nummer
