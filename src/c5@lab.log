@@ -1,0 +1,8 @@
+c5@lab-<0.57.0>-C-1-07: 0te_Nachtricht. C Out: 15.04 23:29:37,125|(0);gesendet 
+c5@lab-<0.57.0>-C-1-07: 1te_Nachtricht. C Out: 15.04 23:29:37,145|(1);gesendet 
+c5@lab-<0.57.0>-C-1-07: 2te_Nachtricht. C Out: 15.04 23:29:37,156|(2);gesendet 
+c5@lab-<0.57.0>-C-1-07: 3te_Nachtricht. C Out: 15.04 23:29:37,226|(3);gesendet 
+c5@lab-<0.57.0>-C-1-07: 4te_Nachtricht. C Out: 15.04 23:29:37,312|(4);gesendet 
+5te_Nachtricht um 15.04 23:29:37,393|vergessen zu senden ******
+c5@lab-<0.57.0>-C-1-07: 0te_Nachtricht. C Out: 15.04 23:29:37,125|(0); HBQ In: 15.04 23:29:37,126| DLQ In: "15.04 23:29:37,128|"gelesen, Terminated = false 
+c5@lab-<0.57.0>-C-1-07: 1te_Nachtricht. C Out: 15.04 23:29:37,145|(1); HBQ In: 15.04 23:29:37,146| DLQ In: "15.04 23:29:37,149|"gelesen, Terminated = false 

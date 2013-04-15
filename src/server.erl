@@ -26,18 +26,18 @@ start() ->
 	{ok, Dlqlimit} = get_config_value(dlqlimit, ConfigListe),
 	{ok, Servername} = get_config_value(servername, ConfigListe),
 	
-	ets:new(config, [named_table, protected, set, {keypos,1}]),
+	ets:new(server_config, [named_table, protected, set, {keypos,1}]),
 	
-	ets:insert(config, {lifetime, Lifetime}),
-	ets:insert(config, {clientlifetime, Clientlifetime}),
-	ets:insert(config, {dlqlimit, Dlqlimit}),
-	ets:insert(config, {servername, Servername}),
+	ets:insert(server_config, {lifetime, Lifetime}),
+	ets:insert(server_config, {clientlifetime, Clientlifetime}),
+	ets:insert(server_config, {dlqlimit, Dlqlimit}),
+	ets:insert(server_config, {servername, Servername}),
 	
 	%[{servername,SN}] = ets:lookup(config, servername),
 
 	PID = spawn(fun() -> loop(0, HBQ, DLQ, Clients) end),
 	register(Servername,PID),
-	timer:send_after(Lifetime * 1000, exit),
+	timer:send_after(Lifetime * 1000, PID, exit),
 	PID.
 
 % empfangene Nachricht in HBQ speichern
@@ -76,7 +76,7 @@ check_dlq(DLQ, HBQ) ->
 			%Systemzeit anhängen
 			New_Nachricht = Nachricht ++ " DLQ In: " ++ to_String(timeMilliSecond()),
 			% prüfen, ob DLQ ihr Limit erreicht hat
-			[{_,Dlqlimit}] = ets:lookup(config, dlqlimit),
+			[{_,Dlqlimit}] = ets:lookup(server_config, dlqlimit),
 			case dict:size(DLQ) >= Dlqlimit of
 			  % wenn ja, kleinste Nummer in DLQ löschen und durch neue Nachricht ersetzen
 			  true ->
@@ -115,7 +115,7 @@ check_error(DLQ, HBQ, From, To) ->
 	end.
 		 	
 check_error(DLQ, HBQ) ->
-	[{_,Dlqlimit}] = ets:lookup(config, dlqlimit),
+	[{_,Dlqlimit}] = ets:lookup(server_config, dlqlimit),
 	case dict:size(HBQ) > Dlqlimit/2 of
 		true ->
 			Current = lists:max(dict:fetch_keys(DLQ))+1,
@@ -125,41 +125,52 @@ check_error(DLQ, HBQ) ->
 	end.
 
 getmessages(Client, Clients, DLQ) ->
-	[{clientlifetime, Sekunden}] = ets:lookup(config, clientlifetime),
-	{ok,{Current,Timer}} = dict:find(Client, Clients),
+	[{_, Sekunden}] = ets:lookup(server_config, clientlifetime),
 	% wenn DLQ keine Nachrichten enthält
-	case dict:size(DLQ) =:= 0 of
+	case dict:size(DLQ) == 0 of
 		true ->
-		  	reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-			Client ! {reply, -1, "Keine Eintraege vorhanden!", true};
+		  	case dict:is_key(Client, Clients) of
+			  true ->
+		    	{ok,{_,Timer}} = dict:find(Client, Clients),
+			    Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
+		  		reset_timer(Timer,Sekunden,{endoflifetime, Client}),
+			    dict;
+			  false ->
+				Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
+				{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client}),
+				dict:store(Client, {0, New_Timer}, Clients)
+			end;
 		false ->
 			% wenn der Client beim Server bekannt ist
 			case dict:is_key(Client, Clients) of
 				true ->
+				  	{ok,{Current,Timer}} = dict:find(Client, Clients),
 					Max = lists:max(dict:fetch_keys(DLQ)),
 					% ist die zuletzt gelesene Nachrichtennr des Clients = dem Maximalwert in der DLQ
-					case Current =:= Max of
+					case Current == Max of
 						true ->
 							% schicke Fehlernachricht, da der Client keine weiteren Nachrichten lesen kann
 							reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-						  	Client ! {reply, -1, "Keine Eintraege vorhanden!", true};
+						  	Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
+							dict;
 						false ->
 							% wenn nicht, suche nächste Nachricht in DLQ (get_next_message)
 							% Anwort besteht aus dem 4er Tupel {reply, Number, Nachricht, true/false}
 							Antwort = get_next_message(DLQ, Current+1, Max),
-							Client ! Antwort
+							io:format("Antwort: ~p~n", [Antwort]),
+							Client ! Antwort,
 							% zuletzt gelesene Nachricht des Clients aktualisieren
 							reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-							dict:store(Client, {element(Antwort,3),Timer}, dict:erase(Client, Clients))
+							dict:store(Client, {element(3,Antwort),Timer}, dict:erase(Client, Clients))
 					end;
 				false ->
 					% kennt der Server den Client nicht, schickt er ihm die Nachricht mit kleinster Nummer
 					Min = lists:min(dict:fetch_keys(DLQ)),
 					{ok, Nachricht} = dict:find(Min, DLQ),
 					% wenn nur 1 Element in DLQ, lesen beenden (Terminated = true)
-					Client ! {reply, Min, Nachricht, dict:size(DLQ) =:= 1},
+					Client ! {reply, Min, Nachricht, dict:size(DLQ) == 1},
 					% Client in Dictionary speichern, damit er beim nächsten Aufruf bekannt ist
-					{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client})
+					{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client}),
 					dict:store(Client, {Min, New_Timer}, Clients)
 			end
 	end.
@@ -168,14 +179,15 @@ getmessages(Client, Clients, DLQ) ->
 get_next_message(DLQ, Current, Max) ->
 	case dict:is_key(Current, DLQ) of
 		true ->
-			{ok, Nachricht} = dict:find(Current, DLQ)
-			case Current =:= Max of
+			{ok, Nachricht} = dict:find(Current, DLQ),
+			case Current == Max of
 				true ->
-					{reply, Current, Nachricht, true}
+					{reply, Current, Nachricht, true};
 				false ->
 				    {reply, Current, Nachricht, false}
+			end;
 		false ->
-			check_if_next(DLQ, Current+1, Max)
+			get_next_message(DLQ, Current+1, Max)
 	end.
 
 shutdown(Clients) ->
@@ -206,8 +218,8 @@ loop(Counter, HBQ, DLQ, Clients) ->
 		    New_DLQ = check_error(TMP_DLQ, New_HBQ),
 			loop(Counter,New_HBQ,New_DLQ, Clients);
 		{getmessages, Client} ->
-	   		getmessages(Client, Clients, DLQ),
-			loop(Counter, HBQ, DLQ, Clients);
+	   		Changed_Clients = getmessages(Client, Clients, DLQ),
+			loop(Counter, HBQ, DLQ, Changed_Clients);
 		{endoflifetime, Client} ->
 			loop(Counter, HBQ, DLQ, dict:erase(Client, Clients));
 		exit ->

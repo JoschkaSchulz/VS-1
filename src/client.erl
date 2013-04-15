@@ -3,7 +3,7 @@
 
 
 -module(client).
--import(werkzeug, [to_String/1,timeMilliSecond/0,logging/2]).
+-import(werkzeug, [to_String/1,timeMilliSecond/0,logging/2,get_config_value/2]).
 %% ====================================================================
 %% API functions
 %% ====================================================================
@@ -24,16 +24,16 @@ start(Name, Server) ->
 	{ok, Servername} = get_config_value(servername, ConfigListe),
 	{ok, Sendeintervall} = get_config_value(sendeintervall, ConfigListe),
 	
-	ets:new(config, [named_table, protected, set, {keypos,1}]),
+	ets:new(client_config, [named_table, protected, set, {keypos,1}]),
 	
-	ets:insert(config, {clients, Anzahl_Clients}),
-	ets:insert(config, {lifetime, Lifetime}),
-	ets:insert(config, {servername, Servername}),
-	ets:insert(config, {sendeintervall, Sendeintervall}),
+	ets:insert(client_config, {clients, Anzahl_Clients}),
+	ets:insert(client_config, {lifetime, Lifetime}),
+	ets:insert(client_config, {servername, Servername}),
+	ets:insert(client_config, {sendeintervall, Sendeintervall}),
 	
 	PID = spawn(fun() -> loop(Server, 0, Name) end),
 	register(Name,PID),
-	timer:send_after(Lifetime * 1000, exit), %exit bei client muss noch gemacht werden
+	timer:send_after(Lifetime * 1000, PID, exit), %exit bei client muss noch gemacht werden
 	PID.
 
 get_msg_id(Server) ->
@@ -52,15 +52,18 @@ send_message(Server,Name) ->
 	Number = get_msg_id(Server),
 	Nachricht = create_message(Name, Number),
 	Server ! {dropmessage, {Nachricht, Number}},
-	logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "~n",[])).
+	logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "gesendet ~n",[])).
 
-read_messages(Server) ->
+read_messages(Server, Name) ->
 	Server ! {getmessages, self()},
 	receive
 		{reply, Number, Nachricht, Terminated} ->
-			if Terminated == false ->
-				read_messages(Server);
-		   		true -> ok 
+			case Terminated == false of
+				true ->
+					logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "gelesen, Terminated = false ~n",[])),
+					read_messages(Server, Name);
+		   		false ->
+					logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "gelesen, Terminated = true ~n",[]))
 			end
 	end.
 
@@ -78,6 +81,6 @@ loop(Server, Counter, Name) ->
 	   	true ->
 			Number = get_msg_id(Server),	% 11. Client vergisst die Nachricht
 			logging(to_String(Name) ++ "@lab.log",msg_got_by_slender(Number)),
-			read_messages(Server),
+			read_messages(Server, Name),
 			loop(Server, 0, Name)
 	end.
