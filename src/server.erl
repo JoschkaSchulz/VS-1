@@ -134,7 +134,7 @@ getmessages(Client, Clients, DLQ) ->
 		    	{ok,{_,Timer}} = dict:find(Client, Clients),
 			    Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
 		  		reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-			    dict;
+			    Clients;
 			  false ->
 				Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
 				{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client}),
@@ -152,13 +152,11 @@ getmessages(Client, Clients, DLQ) ->
 							% schicke Fehlernachricht, da der Client keine weiteren Nachrichten lesen kann
 							reset_timer(Timer,Sekunden,{endoflifetime, Client}),
 						  	Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
-							dict;
+							Clients;
 						false ->
 							% wenn nicht, suche nächste Nachricht in DLQ (get_next_message)
 							% Anwort besteht aus dem 4er Tupel {reply, Number, Nachricht, true/false}
-							io:format("Current: ~p Max: ~p~n", [Current, Max]),
-						  	Antwort = get_next_message(DLQ, Current+1, Max),
-							io:format("Antwort: ~p Max: ~p~n", [Antwort, Max]),
+							Antwort = get_next_message(DLQ, Current+1, Max),
 							Client ! Antwort,
 							% zuletzt gelesene Nachricht des Clients aktualisieren
 							reset_timer(Timer,Sekunden,{endoflifetime, Client}),

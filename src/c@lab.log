@@ -30,3 +30,27 @@ c@lab-<0.50.0>-C-1-07: 14te_Nachtricht. C Out: 15.04 23:46:15,854|(14);gesendet
 c@lab-<0.50.0>-C-1-07: 15te_Nachtricht. C Out: 15.04 23:46:15,854|(15);gesendet 
 c@lab-<0.50.0>-C-1-07: 16te_Nachtricht. C Out: 15.04 23:46:15,856|(16);gesendet 
 17te_Nachtricht um 15.04 23:46:15,857|vergessen zu senden ******
+c@lab-<0.50.0>-C-1-07: 0te_Nachtricht. C Out: 16.04 00:01:12,558|(0);gesendet 
+c@lab-<0.50.0>-C-1-07: 1te_Nachtricht. C Out: 16.04 00:01:12,559|(1);gesendet 
+c@lab-<0.50.0>-C-1-07: 2te_Nachtricht. C Out: 16.04 00:01:12,560|(2);gesendet 
+c@lab-<0.50.0>-C-1-07: 3te_Nachtricht. C Out: 16.04 00:01:12,561|(3);gesendet 
+c@lab-<0.50.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 00:01:12,562|(4);gesendet 
+5te_Nachtricht um 16.04 00:01:12,563|vergessen zu senden ******
+c@lab-<0.50.0>-C-1-07: 0te_Nachtricht. C Out: 16.04 00:01:12,558|(0); HBQ In: 16.04 00:01:12,558| DLQ In: "16.04 00:01:12,558|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 1te_Nachtricht. C Out: 16.04 00:01:12,559|(1); HBQ In: 16.04 00:01:12,559| DLQ In: "16.04 00:01:12,559|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 2te_Nachtricht. C Out: 16.04 00:01:12,560|(2); HBQ In: 16.04 00:01:12,560| DLQ In: "16.04 00:01:12,560|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 3te_Nachtricht. C Out: 16.04 00:01:12,561|(3); HBQ In: 16.04 00:01:12,561| DLQ In: "16.04 00:01:12,561|"gelesen, Terminated = false 
+c@lab-<0.50.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 00:01:12,562|(4); HBQ In: 16.04 00:01:12,562| DLQ In: "16.04 00:01:12,562|"gelesen, Terminated = true 
+c@lab-<0.50.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 00:01:12,574|(6);gesendet 
+c@lab-<0.50.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 00:01:12,575|(7);gesendet 
+c@lab-<0.50.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 00:01:12,583|(8);gesendet 
+c@lab-<0.50.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 00:01:12,583|(9);gesendet 
+c@lab-<0.50.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 00:01:12,583|(10);gesendet 
+11te_Nachtricht um 16.04 00:01:12,584|vergessen zu senden ******
+Keine Eintraege vorhanden!gelesen, Terminated = true 
+c@lab-<0.50.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 00:01:12,584|(12);gesendet 
+c@lab-<0.50.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 00:01:12,585|(13);gesendet 
+c@lab-<0.50.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 00:01:12,597|(14);gesendet 
+c@lab-<0.50.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 00:01:12,598|(15);gesendet 
+c@lab-<0.50.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 00:01:12,599|(16);gesendet 
+17te_Nachtricht um 16.04 00:01:12,599|vergessen zu senden ******
