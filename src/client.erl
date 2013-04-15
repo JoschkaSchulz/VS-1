@@ -16,8 +16,24 @@
 %% ====================================================================
 
 start(Name, Server) ->
+	
+	%Lade Client Konfiguration
+	{ok, ConfigListe} = file:consult("client.cfg"),
+  	{ok, Anzahl_Clients} = get_config_value(clients, ConfigListe),
+	{ok, Lifetime} = get_config_value(lifetime, ConfigListe),
+	{ok, Servername} = get_config_value(servername, ConfigListe),
+	{ok, Sendeintervall} = get_config_value(sendeintervall, ConfigListe),
+	
+	ets:new(config, [named_table, protected, set, {keypos,1}]),
+	
+	ets:insert(config, {clients, Anzahl_Clients}),
+	ets:insert(config, {lifetime, Lifetime}),
+	ets:insert(config, {servername, Servername}),
+	ets:insert(config, {sendeintervall, Sendeintervall}),
+	
 	PID = spawn(fun() -> loop(Server, 0, Name) end),
 	register(Name,PID),
+	timer:send_after(Lifetime * 1000, exit), %exit bei client muss noch gemacht werden
 	PID.
 
 get_msg_id(Server) ->
@@ -54,7 +70,7 @@ msg_got_by_slender(Number) ->
 
 loop(Server, Counter, Name) ->
 	% Redakteurclient
-	if Counter < 100000 ->
+	if Counter < 5 ->
 		send_message(Server, Name),
 		loop(Server, Counter+1, Name);
 		
