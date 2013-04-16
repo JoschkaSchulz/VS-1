@@ -1,297 +1,301 @@
-"client2"@joschka-1000H<0.258.0>-C-1-07: 2te_Nachtricht. C Out: 16.04 22:58:10,841|(2); HBQ In: 16.04 22:58:13,849|-dropmessage 
-HBQ: [] DLQ: []
-"client3"@joschka-1000H<0.257.0>-C-1-07: 1te_Nachtricht. C Out: 16.04 22:58:10,843|(1); HBQ In: 16.04 22:58:13,850|-dropmessage 
-HBQ: [] DLQ: []
-"client4"@joschka-1000H<0.256.0>-C-1-07: 0te_Nachtricht. C Out: 16.04 22:58:10,842|(0); HBQ In: 16.04 22:58:13,850|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 0te_Nachtricht. C Out: 16.04 22:58:10,842|(0); HBQ In: 16.04 22:58:13,850| DLQ In: "16.04 22:58:13,851|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 0te_Nachtricht. C Out: 16.04 23:37:10,776|(0); HBQ In: 16.04 23:37:13,781|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 0te_Nachtricht. C Out: 16.04 23:37:10,776|(0); HBQ In: 16.04 23:37:13,781| DLQ In: "16.04 23:37:13,782|"
 HBQ: [] DLQ: [0]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 3te_Nachtricht. C Out: 16.04 22:58:10,842|(3); HBQ In: 16.04 22:58:13,852|-dropmessage 
-HBQ: [3] DLQ: [0]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 22:58:13,856|(4); HBQ In: 16.04 22:58:16,865|-dropmessage 
-HBQ: [3,4] DLQ: [0]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 22:58:13,858|(7); HBQ In: 16.04 22:58:16,866|-dropmessage 
-HBQ: [3,4,7] DLQ: [0]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 22:58:13,859|(6); HBQ In: 16.04 22:58:16,866|-dropmessage 
-HBQ: [3,6,4,7] DLQ: [0]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 22:58:13,859|(5); HBQ In: 16.04 22:58:16,867|-dropmessage 
-HBQ: [3,6,5,4,7] DLQ: [0]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 22:58:16,873|(10); HBQ In: 16.04 22:58:19,877|-dropmessage 
-HBQ: [3,6,5,4,7,10] DLQ: [0]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 22:58:16,872|(8); HBQ In: 16.04 22:58:19,877|-dropmessage 
-HBQ: [3,6,5,8,4,7,10] DLQ: [0]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 22:58:16,873|(11); HBQ In: 16.04 22:58:19,878|-dropmessage 
-HBQ: [3,6,5,8,11,4,7,10] DLQ: [0]
-***Fehlernachricht fuer Nachrichtennummern 1 bis 2 um "16.04 22:58:19,878|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 22:58:16,873|(9); HBQ In: 16.04 22:58:19,879|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 3te_Nachtricht. C Out: 16.04 22:58:10,842|(3); HBQ In: 16.04 22:58:13,852| DLQ In: "16.04 22:58:19,879|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 22:58:13,856|(4); HBQ In: 16.04 22:58:16,865| DLQ In: "16.04 22:58:19,880|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 22:58:13,859|(5); HBQ In: 16.04 22:58:16,867| DLQ In: "16.04 22:58:19,880|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 22:58:13,859|(6); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,883|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 22:58:13,858|(7); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,884|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 22:58:16,872|(8); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,887|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 22:58:16,873|(9); HBQ In: 16.04 22:58:19,879| DLQ In: "16.04 22:58:19,887|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 22:58:16,873|(10); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,888|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 22:58:16,873|(11); HBQ In: 16.04 22:58:19,878| DLQ In: "16.04 22:58:19,888|"
-HBQ: [] DLQ: [0,3,6,9,2,5,8,11,4,7,10]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 22:58:19,886|(13); HBQ In: 16.04 22:58:22,893|-dropmessage 
-HBQ: "\r" DLQ: [0,3,6,9,2,5,8,11,4,7,10]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 22:58:19,886|(14); HBQ In: 16.04 22:58:22,894|-dropmessage 
-HBQ: [14,13] DLQ: [0,3,6,9,2,5,8,11,4,7,10]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 22:58:19,886|(12); HBQ In: 16.04 22:58:22,894|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 22:58:19,886|(12); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 22:58:19,886|(13); HBQ In: 16.04 22:58:22,893| DLQ In: "16.04 22:58:22,895|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 22:58:19,886|(14); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|"
-HBQ: [] DLQ: [0,3,6,9,12,2,5,8,11,14,4,7,10,13]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 22:58:19,889|(15); HBQ In: 16.04 22:58:22,896|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 22:58:19,889|(15); HBQ In: 16.04 22:58:22,896| DLQ In: "16.04 22:58:22,896|"
-HBQ: [] DLQ: [0,3,6,9,12,15,2,5,8,11,14,4,7,10,13]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 22:58:22,900|(16); HBQ In: 16.04 22:58:25,907|-dropmessage 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 22:58:22,900|(16); HBQ In: 16.04 22:58:25,907| DLQ In: "16.04 22:58:25,907|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 1te_Nachtricht. C Out: 16.04 23:37:10,776|(1); HBQ In: 16.04 23:37:13,782|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 1te_Nachtricht. C Out: 16.04 23:37:10,776|(1); HBQ In: 16.04 23:37:13,782| DLQ In: "16.04 23:37:13,783|"
+HBQ: [] DLQ: [0,1]
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 3te_Nachtricht. C Out: 16.04 23:37:10,776|(3); HBQ In: 16.04 23:37:13,783|-dropmessage 
+HBQ: [3] DLQ: [0,1]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 2te_Nachtricht. C Out: 16.04 23:37:10,776|(2); HBQ In: 16.04 23:37:13,784|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 2te_Nachtricht. C Out: 16.04 23:37:10,776|(2); HBQ In: 16.04 23:37:13,784| DLQ In: "16.04 23:37:13,784|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 3te_Nachtricht. C Out: 16.04 23:37:10,776|(3); HBQ In: 16.04 23:37:13,783| DLQ In: "16.04 23:37:13,785|"
+HBQ: [] DLQ: [0,3,2,1]
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796|-dropmessage 
+HBQ: [5] DLQ: [0,3,2,1]
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797|-dropmessage 
+HBQ: [6,5] DLQ: [0,3,2,1]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798|-dropmessage 
+HBQ: [6,5,7] DLQ: [0,3,2,1]
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 23:37:13,789|(4); HBQ In: 16.04 23:37:16,799|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 23:37:13,789|(4); HBQ In: 16.04 23:37:16,799| DLQ In: "16.04 23:37:16,799|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796| DLQ In: "16.04 23:37:16,800|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797| DLQ In: "16.04 23:37:16,801|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798| DLQ In: "16.04 23:37:16,803|"
+HBQ: [] DLQ: [0,3,6,2,5,1,4,7]
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811| DLQ In: "16.04 23:37:19,811|"
+HBQ: [] DLQ: [0,3,6,2,5,8,1,4,7]
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812| DLQ In: "16.04 23:37:19,812|"
+HBQ: [] DLQ: [0,3,6,9,2,5,8,1,4,7]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813| DLQ In: "16.04 23:37:19,813|"
+HBQ: [] DLQ: [0,3,6,9,2,5,8,1,4,7,10]
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814| DLQ In: "16.04 23:37:19,814|"
+HBQ: [] DLQ: [0,3,6,9,2,5,8,11,1,4,7,10]
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,822|"
+HBQ: [] DLQ: [0,3,6,9,12,2,5,8,11,1,4,7,10]
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,823|"
+HBQ: [] DLQ: [0,3,6,9,12,2,5,8,11,1,4,7,10,13]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824| DLQ In: "16.04 23:37:22,824|"
+HBQ: [] DLQ: [0,3,6,9,12,2,5,8,11,14,1,4,7,10,13]
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825| DLQ In: "16.04 23:37:22,825|"
+HBQ: [] DLQ: [3,6,9,12,15,2,5,8,11,14,1,4,7,10,13]
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835| DLQ In: "16.04 23:37:25,835|"
 HBQ: [] DLQ: [16,3,6,9,12,15,2,5,8,11,14,4,7,10,13]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 22:58:22,900|(17); HBQ In: 16.04 22:58:25,908|-dropmessage 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 22:58:22,900|(17); HBQ In: 16.04 22:58:25,908| DLQ In: "16.04 22:58:25,909|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837| DLQ In: "16.04 23:37:25,837|"
 HBQ: [] DLQ: [16,3,6,9,12,15,5,8,11,14,17,4,7,10,13]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 22:58:22,901|(18); HBQ In: 16.04 22:58:25,910|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 22:58:22,901|(18); HBQ In: 16.04 22:58:25,910| DLQ In: "16.04 22:58:25,910|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838| DLQ In: "16.04 23:37:25,838|"
 HBQ: [] DLQ: [16,6,9,12,15,18,5,8,11,14,17,4,7,10,13]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 22:58:22,901|(19); HBQ In: 16.04 22:58:25,911|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 22:58:22,901|(19); HBQ In: 16.04 22:58:25,911| DLQ In: "16.04 22:58:25,911|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840| DLQ In: "16.04 23:37:25,840|"
 HBQ: [] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 22:58:13,859|(5); HBQ In: 16.04 22:58:16,867| DLQ In: "16.04 22:58:19,880|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 22:58:13,859|(5); HBQ In: 16.04 22:58:16,867| DLQ In: "16.04 22:58:19,880|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 22:58:13,859|(5); HBQ In: 16.04 22:58:16,867| DLQ In: "16.04 22:58:19,880|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 22:58:13,859|(5); HBQ In: 16.04 22:58:16,867| DLQ In: "16.04 22:58:19,880|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 22:58:13,859|(6); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,883|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 22:58:13,859|(6); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,883|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 22:58:13,859|(6); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,883|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 22:58:13,859|(6); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,883|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 22:58:13,858|(7); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,884|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 22:58:13,858|(7); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,884|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 22:58:13,858|(7); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,884|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 22:58:13,858|(7); HBQ In: 16.04 22:58:16,866| DLQ In: "16.04 22:58:19,884|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 22:58:16,872|(8); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 22:58:16,872|(8); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 22:58:16,872|(8); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 22:58:16,872|(8); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 22:58:16,873|(9); HBQ In: 16.04 22:58:19,879| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 22:58:16,873|(9); HBQ In: 16.04 22:58:19,879| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 22:58:16,873|(9); HBQ In: 16.04 22:58:19,879| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 22:58:16,873|(9); HBQ In: 16.04 22:58:19,879| DLQ In: "16.04 22:58:19,887|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 22:58:16,873|(10); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 22:58:16,873|(10); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 22:58:16,873|(10); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 22:58:16,873|(10); HBQ In: 16.04 22:58:19,877| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 22:58:16,873|(11); HBQ In: 16.04 22:58:19,878| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 22:58:16,873|(11); HBQ In: 16.04 22:58:19,878| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 22:58:16,873|(11); HBQ In: 16.04 22:58:19,878| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 22:58:16,873|(11); HBQ In: 16.04 22:58:19,878| DLQ In: "16.04 22:58:19,888|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 22:58:19,886|(12); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 22:58:19,886|(12); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 22:58:19,886|(12); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 22:58:19,886|(12); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 22:58:19,886|(13); HBQ In: 16.04 22:58:22,893| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 22:58:19,886|(13); HBQ In: 16.04 22:58:22,893| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 22:58:19,886|(13); HBQ In: 16.04 22:58:22,893| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 22:58:19,886|(13); HBQ In: 16.04 22:58:22,893| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 22:58:19,886|(14); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 22:58:19,886|(14); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 22:58:19,886|(14); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 22:58:19,886|(14); HBQ In: 16.04 22:58:22,894| DLQ In: "16.04 22:58:22,895|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 22:58:19,889|(15); HBQ In: 16.04 22:58:22,896| DLQ In: "16.04 22:58:22,896|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 22:58:19,889|(15); HBQ In: 16.04 22:58:22,896| DLQ In: "16.04 22:58:22,896|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 22:58:19,889|(15); HBQ In: 16.04 22:58:22,896| DLQ In: "16.04 22:58:22,896|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 22:58:19,889|(15); HBQ In: 16.04 22:58:22,896| DLQ In: "16.04 22:58:22,896|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 22:58:22,900|(16); HBQ In: 16.04 22:58:25,907| DLQ In: "16.04 22:58:25,907|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 22:58:22,900|(16); HBQ In: 16.04 22:58:25,907| DLQ In: "16.04 22:58:25,907|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 22:58:22,900|(16); HBQ In: 16.04 22:58:25,907| DLQ In: "16.04 22:58:25,907|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 22:58:22,900|(16); HBQ In: 16.04 22:58:25,907| DLQ In: "16.04 22:58:25,907|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 22:58:22,900|(17); HBQ In: 16.04 22:58:25,908| DLQ In: "16.04 22:58:25,909|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 22:58:22,900|(17); HBQ In: 16.04 22:58:25,908| DLQ In: "16.04 22:58:25,909|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 22:58:22,900|(17); HBQ In: 16.04 22:58:25,908| DLQ In: "16.04 22:58:25,909|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 22:58:22,900|(17); HBQ In: 16.04 22:58:25,908| DLQ In: "16.04 22:58:25,909|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 22:58:22,901|(18); HBQ In: 16.04 22:58:25,910| DLQ In: "16.04 22:58:25,910|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 22:58:22,901|(18); HBQ In: 16.04 22:58:25,910| DLQ In: "16.04 22:58:25,910|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 22:58:22,901|(18); HBQ In: 16.04 22:58:25,910| DLQ In: "16.04 22:58:25,910|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 22:58:22,901|(18); HBQ In: 16.04 22:58:25,910| DLQ In: "16.04 22:58:25,910|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 22:58:22,901|(19); HBQ In: 16.04 22:58:25,911| DLQ In: "16.04 22:58:25,911|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 22:58:22,901|(19); HBQ In: 16.04 22:58:25,911| DLQ In: "16.04 22:58:25,911|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 22:58:22,901|(19); HBQ In: 16.04 22:58:25,911| DLQ In: "16.04 22:58:25,911|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 22:58:22,901|(19); HBQ In: 16.04 22:58:25,911| DLQ In: "16.04 22:58:25,911|" gesendet 
-Client <9263.257.0> wird vergessen! *************
-Client <9263.256.0> wird vergessen! *************
-Client <9263.259.0> wird vergessen! *************
-Client <9263.258.0> wird vergessen! *************
-"client3"@joschka-1000H<0.257.0>-C-1-07: 24te_Nachtricht. C Out: 16.04 22:58:26,038|(24); HBQ In: 16.04 22:58:28,044|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796| DLQ In: "16.04 23:37:16,800|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796| DLQ In: "16.04 23:37:16,800|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796| DLQ In: "16.04 23:37:16,800|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796| DLQ In: "16.04 23:37:16,800|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797| DLQ In: "16.04 23:37:16,801|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797| DLQ In: "16.04 23:37:16,801|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797| DLQ In: "16.04 23:37:16,801|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797| DLQ In: "16.04 23:37:16,801|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798| DLQ In: "16.04 23:37:16,803|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798| DLQ In: "16.04 23:37:16,803|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798| DLQ In: "16.04 23:37:16,803|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798| DLQ In: "16.04 23:37:16,803|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811| DLQ In: "16.04 23:37:19,811|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811| DLQ In: "16.04 23:37:19,811|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811| DLQ In: "16.04 23:37:19,811|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811| DLQ In: "16.04 23:37:19,811|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812| DLQ In: "16.04 23:37:19,812|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812| DLQ In: "16.04 23:37:19,812|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812| DLQ In: "16.04 23:37:19,812|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812| DLQ In: "16.04 23:37:19,812|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813| DLQ In: "16.04 23:37:19,813|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813| DLQ In: "16.04 23:37:19,813|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813| DLQ In: "16.04 23:37:19,813|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813| DLQ In: "16.04 23:37:19,813|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814| DLQ In: "16.04 23:37:19,814|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814| DLQ In: "16.04 23:37:19,814|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814| DLQ In: "16.04 23:37:19,814|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814| DLQ In: "16.04 23:37:19,814|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,822|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,822|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,822|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,823|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,822|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,823|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,823|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824| DLQ In: "16.04 23:37:22,824|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,823|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824| DLQ In: "16.04 23:37:22,824|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824| DLQ In: "16.04 23:37:22,824|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824| DLQ In: "16.04 23:37:22,824|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825| DLQ In: "16.04 23:37:22,825|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825| DLQ In: "16.04 23:37:22,825|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825| DLQ In: "16.04 23:37:22,825|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835| DLQ In: "16.04 23:37:25,835|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825| DLQ In: "16.04 23:37:22,825|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835| DLQ In: "16.04 23:37:25,835|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837| DLQ In: "16.04 23:37:25,837|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835| DLQ In: "16.04 23:37:25,835|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837| DLQ In: "16.04 23:37:25,837|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835| DLQ In: "16.04 23:37:25,835|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837| DLQ In: "16.04 23:37:25,837|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838| DLQ In: "16.04 23:37:25,838|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838| DLQ In: "16.04 23:37:25,838|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837| DLQ In: "16.04 23:37:25,837|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838| DLQ In: "16.04 23:37:25,838|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840| DLQ In: "16.04 23:37:25,840|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840| DLQ In: "16.04 23:37:25,840|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838| DLQ In: "16.04 23:37:25,838|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840| DLQ In: "16.04 23:37:25,840|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840| DLQ In: "16.04 23:37:25,840|" gesendet 
+Client <6650.2160.0> wird vergessen! *************
+Client <6650.2163.0> wird vergessen! *************
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 24te_Nachtricht. C Out: 16.04 23:37:25,968|(24); HBQ In: 16.04 23:37:27,971|-dropmessage 
 HBQ: [24] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 25te_Nachtricht. C Out: 16.04 22:58:26,038|(25); HBQ In: 16.04 22:58:28,045|-dropmessage 
+Client <6650.2161.0> wird vergessen! *************
+Client <6650.2162.0> wird vergessen! *************
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 25te_Nachtricht. C Out: 16.04 23:37:25,974|(25); HBQ In: 16.04 23:37:27,979|-dropmessage 
 HBQ: [25,24] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 26te_Nachtricht. C Out: 16.04 22:58:26,038|(26); HBQ In: 16.04 22:58:28,046|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 26te_Nachtricht. C Out: 16.04 23:37:25,976|(26); HBQ In: 16.04 23:37:27,979|-dropmessage 
 HBQ: [25,24,26] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 27te_Nachtricht. C Out: 16.04 22:58:26,039|(27); HBQ In: 16.04 22:58:28,049|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 27te_Nachtricht. C Out: 16.04 23:37:25,977|(27); HBQ In: 16.04 23:37:27,980|-dropmessage 
 HBQ: [25,24,27,26] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 28te_Nachtricht. C Out: 16.04 22:58:28,048|(28); HBQ In: 16.04 22:58:30,051|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 28te_Nachtricht. C Out: 16.04 23:37:27,971|(28); HBQ In: 16.04 23:37:29,976|-dropmessage 
 HBQ: [25,28,24,27,26] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 22:58:28,049|(29); HBQ In: 16.04 22:58:30,053|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985|-dropmessage 
 HBQ: [25,28,24,27,26,29] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 22:58:28,054|(30); HBQ In: 16.04 22:58:30,057|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986|-dropmessage 
 HBQ: [25,28,24,27,30,26,29] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 22:58:28,054|(31); HBQ In: 16.04 22:58:30,058|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986|-dropmessage 
 HBQ: [25,28,31,24,27,30,26,29] DLQ: [16,19,6,9,12,15,18,5,8,11,14,17,7,10,13]
-***Fehlernachricht fuer Nachrichtennummern 20 bis 23 um "16.04 22:58:30,058|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 22:58:30,053|(32); HBQ In: 16.04 22:58:32,057|-dropmessage 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 24te_Nachtricht. C Out: 16.04 22:58:26,038|(24); HBQ In: 16.04 22:58:28,044| DLQ In: "16.04 22:58:32,058|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 25te_Nachtricht. C Out: 16.04 22:58:26,038|(25); HBQ In: 16.04 22:58:28,045| DLQ In: "16.04 22:58:32,058|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 26te_Nachtricht. C Out: 16.04 22:58:26,038|(26); HBQ In: 16.04 22:58:28,046| DLQ In: "16.04 22:58:32,058|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 27te_Nachtricht. C Out: 16.04 22:58:26,039|(27); HBQ In: 16.04 22:58:28,049| DLQ In: "16.04 22:58:32,059|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 28te_Nachtricht. C Out: 16.04 22:58:28,048|(28); HBQ In: 16.04 22:58:30,051| DLQ In: "16.04 22:58:32,059|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 22:58:28,049|(29); HBQ In: 16.04 22:58:30,053| DLQ In: "16.04 22:58:32,060|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 22:58:28,054|(30); HBQ In: 16.04 22:58:30,057| DLQ In: "16.04 22:58:32,060|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 22:58:28,054|(31); HBQ In: 16.04 22:58:30,058| DLQ In: "16.04 22:58:32,061|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 22:58:30,053|(32); HBQ In: 16.04 22:58:32,057| DLQ In: "16.04 22:58:32,064|"
+***Fehlernachricht fuer Nachrichtennummern 20 bis 23 um "16.04 23:37:29,987|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 24te_Nachtricht. C Out: 16.04 23:37:25,968|(24); HBQ In: 16.04 23:37:27,971| DLQ In: "16.04 23:37:31,982|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 25te_Nachtricht. C Out: 16.04 23:37:25,974|(25); HBQ In: 16.04 23:37:27,979| DLQ In: "16.04 23:37:31,982|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 26te_Nachtricht. C Out: 16.04 23:37:25,976|(26); HBQ In: 16.04 23:37:27,979| DLQ In: "16.04 23:37:31,983|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 27te_Nachtricht. C Out: 16.04 23:37:25,977|(27); HBQ In: 16.04 23:37:27,980| DLQ In: "16.04 23:37:31,983|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 28te_Nachtricht. C Out: 16.04 23:37:27,971|(28); HBQ In: 16.04 23:37:29,976| DLQ In: "16.04 23:37:31,984|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985| DLQ In: "16.04 23:37:31,984|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,985|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,986|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982| DLQ In: "16.04 23:37:31,986|"
 HBQ: [] DLQ: [32,16,19,25,28,31,15,18,24,27,30,17,23,26,29]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 22:58:30,062|(33); HBQ In: 16.04 22:58:32,068|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 22:58:30,062|(33); HBQ In: 16.04 22:58:32,068| DLQ In: "16.04 22:58:32,068|"
-HBQ: [] DLQ: [32,16,19,25,28,31,18,24,27,30,33,17,23,26,29]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 22:58:30,059|(35); HBQ In: 16.04 22:58:32,074|-dropmessage 
-HBQ: "#" DLQ: [32,16,19,25,28,31,18,24,27,30,33,17,23,26,29]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 22:58:30,059|(34); HBQ In: 16.04 22:58:32,074|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 22:58:30,059|(34); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 22:58:30,059|(35); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991|-dropmessage 
+HBQ: "\"" DLQ: [32,16,19,25,28,31,15,18,24,27,30,17,23,26,29]
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,991|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,992|"
+HBQ: [] DLQ: [32,19,25,28,31,34,18,24,27,30,33,17,23,26,29]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992| DLQ In: "16.04 23:37:31,992|"
 HBQ: [] DLQ: [32,35,19,25,28,31,34,18,24,27,30,33,23,26,29]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 22:58:32,074|(36); HBQ In: 16.04 22:58:34,078|-dropmessage 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 22:58:32,074|(36); HBQ In: 16.04 22:58:34,078| DLQ In: "16.04 22:58:34,078|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992| DLQ In: "16.04 23:37:33,992|"
 HBQ: [] DLQ: [32,35,19,25,28,31,34,24,27,30,33,36,23,26,29]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 22:58:32,076|(37); HBQ In: 16.04 22:58:34,083|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 22:58:32,076|(37); HBQ In: 16.04 22:58:34,083| DLQ In: "16.04 22:58:34,083|"
-HBQ: [] DLQ: [32,35,25,28,31,34,37,24,27,30,33,36,23,26,29]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 22:58:32,077|(38); HBQ In: 16.04 22:58:34,084|-dropmessage 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 22:58:32,077|(38); HBQ In: 16.04 22:58:34,084| DLQ In: "16.04 22:58:34,085|"
-HBQ: [] DLQ: [32,35,38,25,28,31,34,37,24,27,30,33,36,26,29]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 22:58:32,077|(39); HBQ In: 16.04 22:58:34,086|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 22:58:32,077|(39); HBQ In: 16.04 22:58:34,086| DLQ In: "16.04 22:58:34,086|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005|-dropmessage 
+HBQ: "&" DLQ: [32,35,19,25,28,31,34,24,27,30,33,36,23,26,29]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006|-dropmessage 
+HBQ: "&'" DLQ: [32,35,19,25,28,31,34,24,27,30,33,36,23,26,29]
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008| DLQ In: "16.04 23:37:34,008|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005| DLQ In: "16.04 23:37:34,011|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006| DLQ In: "16.04 23:37:34,011|"
 HBQ: [] DLQ: [32,35,38,25,28,31,34,37,27,30,33,36,39,26,29]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 22:58:34,090|(40); HBQ In: 16.04 22:58:36,097|-dropmessage 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 22:58:34,090|(40); HBQ In: 16.04 22:58:36,097| DLQ In: "16.04 22:58:36,098|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000| DLQ In: "16.04 23:37:35,000|"
 HBQ: [] DLQ: [32,35,38,28,31,34,37,40,27,30,33,36,39,26,29]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 22:58:34,091|(41); HBQ In: 16.04 22:58:36,099|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 22:58:34,091|(41); HBQ In: 16.04 22:58:36,099| DLQ In: "16.04 22:58:36,099|"
-HBQ: [] DLQ: [32,35,38,41,28,31,34,37,40,27,30,33,36,39,29]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 22:58:34,091|(42); HBQ In: 16.04 22:58:36,100|-dropmessage 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 22:58:34,091|(42); HBQ In: 16.04 22:58:36,100| DLQ In: "16.04 22:58:36,100|"
-HBQ: [] DLQ: [32,35,38,41,28,31,34,37,40,30,33,36,39,42,29]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 22:58:34,092|(43); HBQ In: 16.04 22:58:36,102|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 22:58:34,092|(43); HBQ In: 16.04 22:58:36,102| DLQ In: "16.04 22:58:36,102|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 26te_Nachtricht. C Out: 16.04 23:37:25,976|(26); HBQ In: 16.04 23:37:27,979| DLQ In: "16.04 23:37:31,983|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 27te_Nachtricht. C Out: 16.04 23:37:25,977|(27); HBQ In: 16.04 23:37:27,980| DLQ In: "16.04 23:37:31,983|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 28te_Nachtricht. C Out: 16.04 23:37:27,971|(28); HBQ In: 16.04 23:37:29,976| DLQ In: "16.04 23:37:31,984|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985| DLQ In: "16.04 23:37:31,984|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,985|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021|-dropmessage 
+HBQ: "*" DLQ: [32,35,38,28,31,34,37,40,27,30,33,36,39,26,29]
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023|-dropmessage 
+HBQ: "+*" DLQ: [32,35,38,28,31,34,37,40,27,30,33,36,39,26,29]
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031| DLQ In: "16.04 23:37:36,031|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021| DLQ In: "16.04 23:37:36,031|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023| DLQ In: "16.04 23:37:36,032|"
 HBQ: [] DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 22:58:28,049|(29); HBQ In: 16.04 22:58:30,053| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 22:58:28,049|(29); HBQ In: 16.04 22:58:30,053| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 22:58:28,049|(29); HBQ In: 16.04 22:58:30,053| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 22:58:28,049|(29); HBQ In: 16.04 22:58:30,053| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 22:58:28,054|(30); HBQ In: 16.04 22:58:30,057| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 22:58:28,054|(30); HBQ In: 16.04 22:58:30,057| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 22:58:28,054|(30); HBQ In: 16.04 22:58:30,057| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 22:58:28,054|(30); HBQ In: 16.04 22:58:30,057| DLQ In: "16.04 22:58:32,060|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 22:58:28,054|(31); HBQ In: 16.04 22:58:30,058| DLQ In: "16.04 22:58:32,061|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 22:58:28,054|(31); HBQ In: 16.04 22:58:30,058| DLQ In: "16.04 22:58:32,061|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 22:58:28,054|(31); HBQ In: 16.04 22:58:30,058| DLQ In: "16.04 22:58:32,061|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 22:58:28,054|(31); HBQ In: 16.04 22:58:30,058| DLQ In: "16.04 22:58:32,061|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 22:58:30,053|(32); HBQ In: 16.04 22:58:32,057| DLQ In: "16.04 22:58:32,064|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 22:58:30,053|(32); HBQ In: 16.04 22:58:32,057| DLQ In: "16.04 22:58:32,064|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 22:58:30,053|(32); HBQ In: 16.04 22:58:32,057| DLQ In: "16.04 22:58:32,064|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 22:58:30,053|(32); HBQ In: 16.04 22:58:32,057| DLQ In: "16.04 22:58:32,064|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 22:58:30,062|(33); HBQ In: 16.04 22:58:32,068| DLQ In: "16.04 22:58:32,068|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 22:58:30,062|(33); HBQ In: 16.04 22:58:32,068| DLQ In: "16.04 22:58:32,068|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 22:58:30,062|(33); HBQ In: 16.04 22:58:32,068| DLQ In: "16.04 22:58:32,068|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 22:58:30,062|(33); HBQ In: 16.04 22:58:32,068| DLQ In: "16.04 22:58:32,068|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 22:58:30,059|(34); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 22:58:30,059|(34); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 22:58:30,059|(34); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 22:58:30,059|(34); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 22:58:30,059|(35); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 22:58:30,059|(35); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 22:58:30,059|(35); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 22:58:30,059|(35); HBQ In: 16.04 22:58:32,074| DLQ In: "16.04 22:58:32,075|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 22:58:32,074|(36); HBQ In: 16.04 22:58:34,078| DLQ In: "16.04 22:58:34,078|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 22:58:32,074|(36); HBQ In: 16.04 22:58:34,078| DLQ In: "16.04 22:58:34,078|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 22:58:32,074|(36); HBQ In: 16.04 22:58:34,078| DLQ In: "16.04 22:58:34,078|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 22:58:32,074|(36); HBQ In: 16.04 22:58:34,078| DLQ In: "16.04 22:58:34,078|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 22:58:32,076|(37); HBQ In: 16.04 22:58:34,083| DLQ In: "16.04 22:58:34,083|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 22:58:32,076|(37); HBQ In: 16.04 22:58:34,083| DLQ In: "16.04 22:58:34,083|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 22:58:32,076|(37); HBQ In: 16.04 22:58:34,083| DLQ In: "16.04 22:58:34,083|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 22:58:32,076|(37); HBQ In: 16.04 22:58:34,083| DLQ In: "16.04 22:58:34,083|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 22:58:32,077|(38); HBQ In: 16.04 22:58:34,084| DLQ In: "16.04 22:58:34,085|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 22:58:32,077|(38); HBQ In: 16.04 22:58:34,084| DLQ In: "16.04 22:58:34,085|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 22:58:32,077|(38); HBQ In: 16.04 22:58:34,084| DLQ In: "16.04 22:58:34,085|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 22:58:32,077|(39); HBQ In: 16.04 22:58:34,086| DLQ In: "16.04 22:58:34,086|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 22:58:32,077|(39); HBQ In: 16.04 22:58:34,086| DLQ In: "16.04 22:58:34,086|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 22:58:32,077|(39); HBQ In: 16.04 22:58:34,086| DLQ In: "16.04 22:58:34,086|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 22:58:34,090|(40); HBQ In: 16.04 22:58:36,097| DLQ In: "16.04 22:58:36,098|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 22:58:34,090|(40); HBQ In: 16.04 22:58:36,097| DLQ In: "16.04 22:58:36,098|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 22:58:34,090|(40); HBQ In: 16.04 22:58:36,097| DLQ In: "16.04 22:58:36,098|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 22:58:34,091|(41); HBQ In: 16.04 22:58:36,099| DLQ In: "16.04 22:58:36,099|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 22:58:34,091|(41); HBQ In: 16.04 22:58:36,099| DLQ In: "16.04 22:58:36,099|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 22:58:34,091|(41); HBQ In: 16.04 22:58:36,099| DLQ In: "16.04 22:58:36,099|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 22:58:32,077|(38); HBQ In: 16.04 22:58:34,084| DLQ In: "16.04 22:58:34,085|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 22:58:34,091|(42); HBQ In: 16.04 22:58:36,100| DLQ In: "16.04 22:58:36,100|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 22:58:32,077|(39); HBQ In: 16.04 22:58:34,086| DLQ In: "16.04 22:58:34,086|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 22:58:34,091|(42); HBQ In: 16.04 22:58:36,100| DLQ In: "16.04 22:58:36,100|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 22:58:34,091|(42); HBQ In: 16.04 22:58:36,100| DLQ In: "16.04 22:58:36,100|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 22:58:34,092|(43); HBQ In: 16.04 22:58:36,102| DLQ In: "16.04 22:58:36,102|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 22:58:34,090|(40); HBQ In: 16.04 22:58:36,097| DLQ In: "16.04 22:58:36,098|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 22:58:34,092|(43); HBQ In: 16.04 22:58:36,102| DLQ In: "16.04 22:58:36,102|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 22:58:34,092|(43); HBQ In: 16.04 22:58:36,102| DLQ In: "16.04 22:58:36,102|" gesendet 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 22:58:34,091|(41); HBQ In: 16.04 22:58:36,099| DLQ In: "16.04 22:58:36,099|" gesendet 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 22:58:34,091|(42); HBQ In: 16.04 22:58:36,100| DLQ In: "16.04 22:58:36,100|" gesendet 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 22:58:34,092|(43); HBQ In: 16.04 22:58:36,102| DLQ In: "16.04 22:58:36,102|" gesendet 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 48te_Nachtricht. C Out: 16.04 22:58:36,200|(48); HBQ In: 16.04 22:58:37,204|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985| DLQ In: "16.04 23:37:31,984|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985| DLQ In: "16.04 23:37:31,984|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985| DLQ In: "16.04 23:37:31,984|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,985|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,991|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,985|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,985|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982| DLQ In: "16.04 23:37:31,986|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,991|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992| DLQ In: "16.04 23:37:33,992|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,991|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,991|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008| DLQ In: "16.04 23:37:34,008|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992| DLQ In: "16.04 23:37:31,992|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992| DLQ In: "16.04 23:37:33,992|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992| DLQ In: "16.04 23:37:33,992|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992| DLQ In: "16.04 23:37:33,992|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008| DLQ In: "16.04 23:37:34,008|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000| DLQ In: "16.04 23:37:35,000|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008| DLQ In: "16.04 23:37:34,008|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008| DLQ In: "16.04 23:37:34,008|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006| DLQ In: "16.04 23:37:34,011|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000| DLQ In: "16.04 23:37:35,000|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023| DLQ In: "16.04 23:37:36,032|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000| DLQ In: "16.04 23:37:35,000|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000| DLQ In: "16.04 23:37:35,000|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021| DLQ In: "16.04 23:37:36,031|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023| DLQ In: "16.04 23:37:36,032|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023| DLQ In: "16.04 23:37:36,032|" gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023| DLQ In: "16.04 23:37:36,032|" gesendet 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 48te_Nachtricht. C Out: 16.04 23:37:36,126|(48); HBQ In: 16.04 23:37:37,128|-dropmessage 
 HBQ: "0" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client2"@joschka-1000H<0.258.0>-C-1-07: 49te_Nachtricht. C Out: 16.04 22:58:36,201|(49); HBQ In: 16.04 22:58:37,204|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 49te_Nachtricht. C Out: 16.04 23:37:36,142|(49); HBQ In: 16.04 23:37:37,144|-dropmessage 
 HBQ: "01" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 50te_Nachtricht. C Out: 16.04 22:58:36,205|(50); HBQ In: 16.04 22:58:37,208|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 50te_Nachtricht. C Out: 16.04 23:37:36,143|(50); HBQ In: 16.04 23:37:37,145|-dropmessage 
 HBQ: "021" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 51te_Nachtricht. C Out: 16.04 22:58:36,210|(51); HBQ In: 16.04 22:58:37,212|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 51te_Nachtricht. C Out: 16.04 23:37:36,144|(51); HBQ In: 16.04 23:37:37,146|-dropmessage 
 HBQ: "0321" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-Client <9263.257.0> wird vergessen! *************
-Client <9263.258.0> wird vergessen! *************
-Client <9263.256.0> wird vergessen! *************
-Client <9263.259.0> wird vergessen! *************
-"client2"@joschka-1000H<0.258.0>-C-1-07: 53te_Nachtricht. C Out: 16.04 22:58:37,206|(53); HBQ In: 16.04 22:58:38,212|-dropmessage 
-HBQ: "03251" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client3"@joschka-1000H<0.257.0>-C-1-07: 52te_Nachtricht. C Out: 16.04 22:58:37,206|(52); HBQ In: 16.04 22:58:38,215|-dropmessage 
+Client <6650.2160.0> wird vergessen! *************
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 52te_Nachtricht. C Out: 16.04 23:37:37,130|(52); HBQ In: 16.04 23:37:38,133|-dropmessage 
+HBQ: "03214" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
+Client <6650.2162.0> wird vergessen! *************
+Client <6650.2161.0> wird vergessen! *************
+Client <6650.2163.0> wird vergessen! *************
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 53te_Nachtricht. C Out: 16.04 23:37:37,146|(53); HBQ In: 16.04 23:37:38,152|-dropmessage 
 HBQ: "032514" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client4"@joschka-1000H<0.256.0>-C-1-07: 54te_Nachtricht. C Out: 16.04 22:58:37,210|(54); HBQ In: 16.04 22:58:38,218|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 54te_Nachtricht. C Out: 16.04 23:37:37,219|(54); HBQ In: 16.04 23:37:38,222|-dropmessage 
 HBQ: "0362514" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-"client1"@joschka-1000H<0.259.0>-C-1-07: 55te_Nachtricht. C Out: 16.04 22:58:37,214|(55); HBQ In: 16.04 22:58:38,219|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 55te_Nachtricht. C Out: 16.04 23:37:37,220|(55); HBQ In: 16.04 23:37:38,223|-dropmessage 
 HBQ: "03625147" DLQ: [32,35,38,41,31,34,37,40,43,30,33,36,39,42,29]
-***Fehlernachricht fuer Nachrichtennummern 44 bis 47 um "16.04 22:58:38,220|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 57te_Nachtricht. C Out: 16.04 22:58:38,222|(57); HBQ In: 16.04 22:58:39,224|-dropmessage 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 48te_Nachtricht. C Out: 16.04 22:58:36,200|(48); HBQ In: 16.04 22:58:37,204| DLQ In: "16.04 22:58:39,225|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 49te_Nachtricht. C Out: 16.04 22:58:36,201|(49); HBQ In: 16.04 22:58:37,204| DLQ In: "16.04 22:58:39,225|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 50te_Nachtricht. C Out: 16.04 22:58:36,205|(50); HBQ In: 16.04 22:58:37,208| DLQ In: "16.04 22:58:39,226|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 51te_Nachtricht. C Out: 16.04 22:58:36,210|(51); HBQ In: 16.04 22:58:37,212| DLQ In: "16.04 22:58:39,226|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 52te_Nachtricht. C Out: 16.04 22:58:37,206|(52); HBQ In: 16.04 22:58:38,215| DLQ In: "16.04 22:58:39,227|"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 53te_Nachtricht. C Out: 16.04 22:58:37,206|(53); HBQ In: 16.04 22:58:38,212| DLQ In: "16.04 22:58:39,227|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 54te_Nachtricht. C Out: 16.04 22:58:37,210|(54); HBQ In: 16.04 22:58:38,218| DLQ In: "16.04 22:58:39,228|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 55te_Nachtricht. C Out: 16.04 22:58:37,214|(55); HBQ In: 16.04 22:58:38,219| DLQ In: "16.04 22:58:39,228|"
-HBQ: "9" DLQ: "036&)/25(+147'*"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 56te_Nachtricht. C Out: 16.04 22:58:38,223|(56); HBQ In: 16.04 22:58:39,232|-dropmessage 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 56te_Nachtricht. C Out: 16.04 22:58:38,223|(56); HBQ In: 16.04 22:58:39,232| DLQ In: "16.04 22:58:39,232|"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 57te_Nachtricht. C Out: 16.04 22:58:38,222|(57); HBQ In: 16.04 22:58:39,224| DLQ In: "16.04 22:58:39,233|"
+***Fehlernachricht fuer Nachrichtennummern 44 bis 47 um "16.04 23:37:38,224|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 56te_Nachtricht. C Out: 16.04 23:37:38,138|(56); HBQ In: 16.04 23:37:39,141|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 48te_Nachtricht. C Out: 16.04 23:37:36,126|(48); HBQ In: 16.04 23:37:37,128| DLQ In: "16.04 23:37:39,141|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 49te_Nachtricht. C Out: 16.04 23:37:36,142|(49); HBQ In: 16.04 23:37:37,144| DLQ In: "16.04 23:37:39,142|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 50te_Nachtricht. C Out: 16.04 23:37:36,143|(50); HBQ In: 16.04 23:37:37,145| DLQ In: "16.04 23:37:39,142|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 51te_Nachtricht. C Out: 16.04 23:37:36,144|(51); HBQ In: 16.04 23:37:37,146| DLQ In: "16.04 23:37:39,142|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 52te_Nachtricht. C Out: 16.04 23:37:37,130|(52); HBQ In: 16.04 23:37:38,133| DLQ In: "16.04 23:37:39,144|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 53te_Nachtricht. C Out: 16.04 23:37:37,146|(53); HBQ In: 16.04 23:37:38,152| DLQ In: "16.04 23:37:39,144|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 54te_Nachtricht. C Out: 16.04 23:37:37,219|(54); HBQ In: 16.04 23:37:38,222| DLQ In: "16.04 23:37:39,145|"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 55te_Nachtricht. C Out: 16.04 23:37:37,220|(55); HBQ In: 16.04 23:37:38,223| DLQ In: "16.04 23:37:39,146|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 56te_Nachtricht. C Out: 16.04 23:37:38,138|(56); HBQ In: 16.04 23:37:39,141| DLQ In: "16.04 23:37:39,151|"
+HBQ: [] DLQ: "036)/258(+147'*"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 57te_Nachtricht. C Out: 16.04 23:37:38,156|(57); HBQ In: 16.04 23:37:39,159|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 57te_Nachtricht. C Out: 16.04 23:37:38,156|(57); HBQ In: 16.04 23:37:39,159| DLQ In: "16.04 23:37:39,159|"
 HBQ: [] DLQ: "0369)/258(+147*"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 59te_Nachtricht. C Out: 16.04 22:58:38,223|(59); HBQ In: 16.04 22:58:39,234|-dropmessage 
-HBQ: ";" DLQ: "0369)/258(+147*"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 58te_Nachtricht. C Out: 16.04 22:58:38,223|(58); HBQ In: 16.04 22:58:39,235|-dropmessage 
-"client4"@joschka-1000H<0.256.0>-C-1-07: 58te_Nachtricht. C Out: 16.04 22:58:38,223|(58); HBQ In: 16.04 22:58:39,235| DLQ In: "16.04 22:58:39,235|"
-"client1"@joschka-1000H<0.259.0>-C-1-07: 59te_Nachtricht. C Out: 16.04 22:58:38,223|(59); HBQ In: 16.04 22:58:39,234| DLQ In: "16.04 22:58:39,236|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 58te_Nachtricht. C Out: 16.04 23:37:38,230|(58); HBQ In: 16.04 23:37:39,232|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 58te_Nachtricht. C Out: 16.04 23:37:38,230|(58); HBQ In: 16.04 23:37:39,232| DLQ In: "16.04 23:37:39,232|"
+HBQ: [] DLQ: "0369)/258+147:*"
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 59te_Nachtricht. C Out: 16.04 23:37:38,230|(59); HBQ In: 16.04 23:37:39,232|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 59te_Nachtricht. C Out: 16.04 23:37:38,230|(59); HBQ In: 16.04 23:37:39,232| DLQ In: "16.04 23:37:39,232|"
 HBQ: [] DLQ: "0369/258;+147:*"
-"client3"@joschka-1000H<0.257.0>-C-1-07: 60te_Nachtricht. C Out: 16.04 22:58:39,234|(60); HBQ In: 16.04 22:58:40,236|-dropmessage 
-"client3"@joschka-1000H<0.257.0>-C-1-07: 60te_Nachtricht. C Out: 16.04 22:58:39,234|(60); HBQ In: 16.04 22:58:40,236| DLQ In: "16.04 22:58:40,236|"
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 60te_Nachtricht. C Out: 16.04 23:37:39,155|(60); HBQ In: 16.04 23:37:40,158|-dropmessage 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 60te_Nachtricht. C Out: 16.04 23:37:39,155|(60); HBQ In: 16.04 23:37:40,158| DLQ In: "16.04 23:37:40,158|"
 HBQ: [] DLQ: "0369</258;+147:"
-"client2"@joschka-1000H<0.258.0>-C-1-07: 61te_Nachtricht. C Out: 16.04 22:58:39,238|(61); HBQ In: 16.04 22:58:40,244|-dropmessage 
-"client2"@joschka-1000H<0.258.0>-C-1-07: 61te_Nachtricht. C Out: 16.04 22:58:39,238|(61); HBQ In: 16.04 22:58:40,244| DLQ In: "16.04 22:58:40,244|"
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 61te_Nachtricht. C Out: 16.04 23:37:39,160|(61); HBQ In: 16.04 23:37:40,162|-dropmessage 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 61te_Nachtricht. C Out: 16.04 23:37:39,160|(61); HBQ In: 16.04 23:37:40,162| DLQ In: "16.04 23:37:40,162|"
 HBQ: [] DLQ: "0369</258;147:="
-"client4"@joschka-1000H<0.256.0>-C-1-07: 63te_Nachtricht. C Out: 16.04 22:58:39,238|(63); HBQ In: 16.04 22:58:40,245|-dropmessage 
-HBQ: "?" DLQ: "0369</258;147:="
-"client1"@joschka-1000H<0.259.0>-C-1-07: 62te_Nachtricht. C Out: 16.04 22:58:39,237|(62); HBQ In: 16.04 22:58:40,246|-dropmessage 
-"client1"@joschka-1000H<0.259.0>-C-1-07: 62te_Nachtricht. C Out: 16.04 22:58:39,237|(62); HBQ In: 16.04 22:58:40,246| DLQ In: "16.04 22:58:40,246|"
-"client4"@joschka-1000H<0.256.0>-C-1-07: 63te_Nachtricht. C Out: 16.04 22:58:39,238|(63); HBQ In: 16.04 22:58:40,245| DLQ In: "16.04 22:58:40,246|"
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 62te_Nachtricht. C Out: 16.04 23:37:39,236|(62); HBQ In: 16.04 23:37:40,238|-dropmessage 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 62te_Nachtricht. C Out: 16.04 23:37:39,236|(62); HBQ In: 16.04 23:37:40,238| DLQ In: "16.04 23:37:40,238|"
+HBQ: [] DLQ: "0369<258;>147:="
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 63te_Nachtricht. C Out: 16.04 23:37:39,237|(63); HBQ In: 16.04 23:37:40,239|-dropmessage 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 63te_Nachtricht. C Out: 16.04 23:37:39,237|(63); HBQ In: 16.04 23:37:40,239| DLQ In: "16.04 23:37:40,239|"
 HBQ: [] DLQ: "369<?258;>147:="

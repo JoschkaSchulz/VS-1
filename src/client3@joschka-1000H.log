@@ -1,0 +1,46 @@
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 1te_Nachtricht. C Out: 16.04 23:37:10,776|(1); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 4te_Nachtricht. C Out: 16.04 23:37:13,789|(4); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); gesendet 
+23te_Nachtricht um 16.04 23:37:25,848|vergessen zu senden ******
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 5te_Nachtricht. C Out: 16.04 23:37:13,788|(5); HBQ In: 16.04 23:37:16,796| DLQ In: "16.04 23:37:16,800|" gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 6te_Nachtricht. C Out: 16.04 23:37:13,788|(6); HBQ In: 16.04 23:37:16,797| DLQ In: "16.04 23:37:16,801|" gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 7te_Nachtricht. C Out: 16.04 23:37:13,788|(7); HBQ In: 16.04 23:37:16,798| DLQ In: "16.04 23:37:16,803|" gelesen, Terminated = false 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 8te_Nachtricht. C Out: 16.04 23:37:16,802|(8); HBQ In: 16.04 23:37:19,811| DLQ In: "16.04 23:37:19,811|" gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 9te_Nachtricht. C Out: 16.04 23:37:16,802|(9); HBQ In: 16.04 23:37:19,812| DLQ In: "16.04 23:37:19,812|" gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 10te_Nachtricht. C Out: 16.04 23:37:16,802|(10); HBQ In: 16.04 23:37:19,813| DLQ In: "16.04 23:37:19,813|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 11te_Nachtricht. C Out: 16.04 23:37:16,804|(11); HBQ In: 16.04 23:37:19,814| DLQ In: "16.04 23:37:19,814|"******* gelesen, Terminated = false 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 12te_Nachtricht. C Out: 16.04 23:37:19,814|(12); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,822|" gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 13te_Nachtricht. C Out: 16.04 23:37:19,815|(13); HBQ In: 16.04 23:37:22,822| DLQ In: "16.04 23:37:22,823|" gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 14te_Nachtricht. C Out: 16.04 23:37:19,815|(14); HBQ In: 16.04 23:37:22,824| DLQ In: "16.04 23:37:22,824|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 15te_Nachtricht. C Out: 16.04 23:37:19,816|(15); HBQ In: 16.04 23:37:22,825| DLQ In: "16.04 23:37:22,825|"******* gelesen, Terminated = false 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 16te_Nachtricht. C Out: 16.04 23:37:22,830|(16); HBQ In: 16.04 23:37:25,835| DLQ In: "16.04 23:37:25,835|" gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 17te_Nachtricht. C Out: 16.04 23:37:22,831|(17); HBQ In: 16.04 23:37:25,837| DLQ In: "16.04 23:37:25,837|" gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 18te_Nachtricht. C Out: 16.04 23:37:22,832|(18); HBQ In: 16.04 23:37:25,838| DLQ In: "16.04 23:37:25,838|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 19te_Nachtricht. C Out: 16.04 23:37:22,832|(19); HBQ In: 16.04 23:37:25,840| DLQ In: "16.04 23:37:25,840|"******* gelesen, Terminated = true 
+Neues Sendeintervall: 2 Sekunden"client3"@joschka-1000H<0.2161.0>-C-1-07: 26te_Nachtricht. C Out: 16.04 23:37:25,976|(26); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); gesendet 
+46te_Nachtricht um 16.04 23:37:36,027|vergessen zu senden ******
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 29te_Nachtricht. C Out: 16.04 23:37:27,981|(29); HBQ In: 16.04 23:37:29,985| DLQ In: "16.04 23:37:31,984|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 30te_Nachtricht. C Out: 16.04 23:37:27,981|(30); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,985|"******* gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 31te_Nachtricht. C Out: 16.04 23:37:27,981|(31); HBQ In: 16.04 23:37:29,986| DLQ In: "16.04 23:37:31,986|" gelesen, Terminated = false 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 32te_Nachtricht. C Out: 16.04 23:37:29,977|(32); HBQ In: 16.04 23:37:31,982| DLQ In: "16.04 23:37:31,986|" gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 33te_Nachtricht. C Out: 16.04 23:37:29,989|(33); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,991|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 34te_Nachtricht. C Out: 16.04 23:37:29,988|(34); HBQ In: 16.04 23:37:31,991| DLQ In: "16.04 23:37:31,992|"******* gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 35te_Nachtricht. C Out: 16.04 23:37:29,989|(35); HBQ In: 16.04 23:37:31,992| DLQ In: "16.04 23:37:31,992|" gelesen, Terminated = false 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 36te_Nachtricht. C Out: 16.04 23:37:31,988|(36); HBQ In: 16.04 23:37:33,992| DLQ In: "16.04 23:37:33,992|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 37te_Nachtricht. C Out: 16.04 23:37:32,002|(37); HBQ In: 16.04 23:37:34,008| DLQ In: "16.04 23:37:34,008|"******* gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 38te_Nachtricht. C Out: 16.04 23:37:32,002|(38); HBQ In: 16.04 23:37:34,005| DLQ In: "16.04 23:37:34,011|" gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 39te_Nachtricht. C Out: 16.04 23:37:32,002|(39); HBQ In: 16.04 23:37:34,006| DLQ In: "16.04 23:37:34,011|" gelesen, Terminated = false 
+"client4"@joschka-1000H<0.2160.0>-C-1-07: 40te_Nachtricht. C Out: 16.04 23:37:33,996|(40); HBQ In: 16.04 23:37:35,000| DLQ In: "16.04 23:37:35,000|" gelesen, Terminated = false 
+"client1"@joschka-1000H<0.2163.0>-C-1-07: 41te_Nachtricht. C Out: 16.04 23:37:34,019|(41); HBQ In: 16.04 23:37:36,031| DLQ In: "16.04 23:37:36,031|" gelesen, Terminated = false 
+"client2"@joschka-1000H<0.2162.0>-C-1-07: 42te_Nachtricht. C Out: 16.04 23:37:34,016|(42); HBQ In: 16.04 23:37:36,021| DLQ In: "16.04 23:37:36,031|" gelesen, Terminated = false 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 43te_Nachtricht. C Out: 16.04 23:37:34,017|(43); HBQ In: 16.04 23:37:36,023| DLQ In: "16.04 23:37:36,032|"******* gelesen, Terminated = true 
+Neues Sendeintervall: 1 Sekunden"client3"@joschka-1000H<0.2161.0>-C-1-07: 51te_Nachtricht. C Out: 16.04 23:37:36,144|(51); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 55te_Nachtricht. C Out: 16.04 23:37:37,220|(55); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 59te_Nachtricht. C Out: 16.04 23:37:38,230|(59); gesendet 
+"client3"@joschka-1000H<0.2161.0>-C-1-07: 63te_Nachtricht. C Out: 16.04 23:37:39,237|(63); gesendet 

@@ -41,7 +41,7 @@ start_client(Number, Server, Sendeintervall, Lifetime) ->
 		true ->
 			io:format("Clients gestartet.");
 		false ->
-			Name = lists:flatten(io_lib:format("client~p", [Number])),
+			Name = "client" ++ to_String(Number),
 			PID = spawn(fun() -> loop(Server, 0, Name, dict:new(), Sendeintervall) end),
 			%register(Name,PID),
 			timer:exit_after(Lifetime * 1000, PID, "End of Lifetime"),
@@ -72,7 +72,7 @@ send_message(Server,Name,Own_Messages, Sendeintervall) ->
 		sendmessage ->
 			Server ! {dropmessage, {Nachricht, Number}},
 			{ok, Hostname} = inet:gethostname(),
-			logging(io_lib:format("~p@~p.log",[Name,Hostname]), io_lib:format(Nachricht ++ " gesendet ~n",[])),
+			logging(lists:append([[Name,"@",Hostname,".log"]]), io_lib:format(Nachricht ++ " gesendet ~n",[])),
 			% Message-ID des eigenen Redakteurs wird gespeichert
 			New_Own_Messages = dict:store(Number, Nachricht, Own_Messages),
 			New_Own_Messages
@@ -93,11 +93,11 @@ read_messages(Server, Name,Own_Messages) ->
 			{ok, Hostname} = inet:gethostname(),
 			case Terminated == false of
 				true ->
-					logging(io_lib:format("~p@~p.log",[Name,Hostname]), io_lib:format(Nachricht ++ Is_own_msg ++ " gelesen, Terminated = false ~n",[])),
+					logging(lists:append([[Name,"@",Hostname,".log"]]), io_lib:format(Nachricht ++ Is_own_msg ++ " gelesen, Terminated = false ~n",[])),
 					% wenn Terminated = false, weiter Nachrichten vom Server lesen
 				  	read_messages(Server, Name, Own_Messages);
 		   		false ->
-					logging(io_lib:format("~p@~p.log",[Name,Hostname]), io_lib:format(Nachricht ++ Is_own_msg ++ " gelesen, Terminated = true ~n",[]))
+					logging(lists:append([[Name,"@",Hostname,".log"]]), io_lib:format(Nachricht ++ Is_own_msg ++ " gelesen, Terminated = true ~n",[]))
 			end
 	end.
 
@@ -130,9 +130,9 @@ loop(Server, Counter, Name, Own_Messages, Sendeintervall) ->
 	   	true ->
 			{ok, Hostname} = inet:gethostname(),
 			Number = get_msg_id(Server),	% 11. Client vergisst die Nachricht
-			logging(io_lib:format("~p@~p.log",[Name,Hostname]), msg_got_by_slender(Number)),
+			logging(lists:append([[Name,"@",Hostname,".log"]]), msg_got_by_slender(Number)),
 			read_messages(Server, Name,Own_Messages),
 			Sendeintervall_neu = calculate_interval(Sendeintervall),
-			logging(io_lib:format("~p@~p.log",[Name,Hostname]), "Neues Sendeintervall: " ++ to_String(Sendeintervall_neu) ++ " Sekunden"),
+			logging(lists:append([[Name,"@",Hostname,".log"]]), "Neues Sendeintervall: " ++ to_String(Sendeintervall_neu) ++ " Sekunden"),
 			loop(Server, 0, Name,Own_Messages, Sendeintervall_neu)
 	end.
