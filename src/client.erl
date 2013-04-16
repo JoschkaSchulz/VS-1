@@ -7,7 +7,7 @@
 %% ====================================================================
 %% API functions
 %% ====================================================================
--export([start/2]).
+-export([start/1]).
 
 
 
@@ -15,7 +15,7 @@
 %% Internal functions
 %% ====================================================================
 
-start(Name, Server) ->
+start(Server_node) ->
 	
 	%Lade Client Konfiguration
 	{ok, ConfigListe} = file:consult("client.cfg"),
@@ -24,18 +24,31 @@ start(Name, Server) ->
 	{ok, Servername} = get_config_value(servername, ConfigListe),
 	{ok, Sendeintervall} = get_config_value(sendeintervall, ConfigListe),
 	
-	ets:new(client_config, [named_table, protected, set, {keypos,1}]),
+	%ets:new(client_config, [named_table, protected, set, {keypos,1}]),
 	
-	ets:insert(client_config, {clients, Anzahl_Clients}),
-	ets:insert(client_config, {lifetime, Lifetime}),
-	ets:insert(client_config, {servername, Servername}),
-	ets:insert(client_config, {sendeintervall, Sendeintervall}),
+	%ets:insert(client_config, {clients, Anzahl_Clients}),
+	%ets:insert(client_config, {lifetime, Lifetime}),
+	%ets:insert(client_config, {servername, Servername}),
+	%ets:insert(client_config, {sendeintervall, Sendeintervall}),
 	
-	PID = spawn(fun() -> loop(Server, 0, Name) end),
-	register(Name,PID),
-	timer:send_after(Lifetime * 1000, PID, exit), %exit bei client muss noch gemacht werden
-	PID.
+	Server = {Servername,Server_node},
+	start_client(Anzahl_Clients, Server, Sendeintervall, Lifetime),
+	ok.
 
+% starte alle Clienten
+start_client(Number, Server, Sendeintervall, Lifetime) ->
+	case Number =< 0 of
+		true ->
+			io:format("Clients gestartet.");
+		false ->
+			Name = lists:flatten(io_lib:format("client~p", [Number])),
+			PID = spawn(fun() -> loop(Server, 0, Name, dict:new(), Sendeintervall) end),
+			%register(Name,PID),
+			timer:exit_after(Lifetime * 1000, PID, "End of Lifetime"),
+			start_client(Number-1, Server, Sendeintervall, Lifetime)
+	end.
+
+% fordere Message-ID vom Server an
 get_msg_id(Server) ->
 	Server ! {getmsgid, self()},
 	receive
@@ -43,44 +56,83 @@ get_msg_id(Server) ->
 			Number		
 	end.
 
+% erzeuge die Nachricht als String
 create_message(Name, Number) -> 
-	%"{~°.°}~".
-	Nachricht = to_String(Name) ++ "@lab-" ++ to_String(self()) ++ "-C-1-07: " ++ to_String(Number) ++ "te_Nachtricht. C Out: " ++ timeMilliSecond() ++ "(" ++ to_String(Number) ++ ");",
+	{ok, Hostname} = inet:gethostname(),
+	Nachricht = to_String(Name) ++ "@" ++ Hostname ++ to_String(self()) ++ "-C-1-07: " ++ to_String(Number) ++ "te_Nachtricht. C Out: " ++ timeMilliSecond() ++ "(" ++ to_String(Number) ++ ");",
 	Nachricht. %io_lib:format(Nachricht ++ "~n", []).
 
-send_message(Server,Name) ->
+% erfrage eine Message-ID und sende die Nachricht an den Server
+send_message(Server,Name,Own_Messages, Sendeintervall) ->
 	Number = get_msg_id(Server),
 	Nachricht = create_message(Name, Number),
-	Server ! {dropmessage, {Nachricht, Number}},
-	logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "gesendet ~n",[])).
+	% Timer starten, da erst nach x Sekunden gesendet werden soll
+	timer:send_after(Sendeintervall*1000, sendmessage),
+	receive
+		sendmessage ->
+			Server ! {dropmessage, {Nachricht, Number}},
+			{ok, Hostname} = inet:gethostname(),
+			logging(io_lib:format("~p@~p.log",[Name,Hostname]), io_lib:format(Nachricht ++ " gesendet ~n",[])),
+			% Message-ID des eigenen Redakteurs wird gespeichert
+			New_Own_Messages = dict:store(Number, Nachricht, Own_Messages),
+			New_Own_Messages
+	end.
 
-read_messages(Server, Name) ->
+% lese Nachrichten vom Server
+read_messages(Server, Name,Own_Messages) ->
 	Server ! {getmessages, self()},
 	receive
 		{reply, Number, Nachricht, Terminated} ->
+			case dict:is_key(Number, Own_Messages) of
+				% wenn die Message-ID vom eigenen Redakteur gesendet wurde, hänge ****** an
+				true ->
+					Is_own_msg = "*******";
+				false ->
+					Is_own_msg = ""
+			end,
+			{ok, Hostname} = inet:gethostname(),
 			case Terminated == false of
 				true ->
-					logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "gelesen, Terminated = false ~n",[])),
-					read_messages(Server, Name);
+					logging(io_lib:format("~p@~p.log",[Name,Hostname]), io_lib:format(Nachricht ++ Is_own_msg ++ " gelesen, Terminated = false ~n",[])),
+					% wenn Terminated = false, weiter Nachrichten vom Server lesen
+				  	read_messages(Server, Name, Own_Messages);
 		   		false ->
-					logging(to_String(Name) ++ "@lab.log", io_lib:format(Nachricht ++ "gelesen, Terminated = true ~n",[]))
+					logging(io_lib:format("~p@~p.log",[Name,Hostname]), io_lib:format(Nachricht ++ Is_own_msg ++ " gelesen, Terminated = true ~n",[]))
 			end
 	end.
 
+% generiere die "Vergessen zu senden"-Nachricht
 msg_got_by_slender(Number) ->
 	Nachricht = to_String(Number) ++ "te_Nachtricht um " ++ timeMilliSecond() ++ "vergessen zu senden ******",
 	io_lib:format(Nachricht ++ "~n", []).
 
-loop(Server, Counter, Name) ->
+calculate_interval(Sendeintervall) ->
+	Faktor = case random:uniform(2) of
+    	1 -> -0.5;
+    	_ -> 0.5
+  	end,
+  	Sendeintervall_neu = Sendeintervall + (Sendeintervall * Faktor),
+
+  	case Sendeintervall_neu < 1 of
+  		true -> 
+			1;
+   		false -> 
+			round(Sendeintervall_neu)
+  	end.
+
+loop(Server, Counter, Name, Own_Messages, Sendeintervall) ->
 	% Redakteurclient
 	if Counter < 5 ->
-		send_message(Server, Name),
-		loop(Server, Counter+1, Name);
-		
+		New_Own_Messages = send_message(Server, Name, Own_Messages, Sendeintervall),
+		loop(Server, Counter+1, Name, New_Own_Messages, Sendeintervall);
+			
 	   	% Leseclient
 	   	true ->
+			{ok, Hostname} = inet:gethostname(),
 			Number = get_msg_id(Server),	% 11. Client vergisst die Nachricht
-			logging(to_String(Name) ++ "@lab.log",msg_got_by_slender(Number)),
-			read_messages(Server, Name),
-			loop(Server, 0, Name)
+			logging(io_lib:format("~p@~p.log",[Name,Hostname]), msg_got_by_slender(Number)),
+			read_messages(Server, Name,Own_Messages),
+			Sendeintervall_neu = calculate_interval(Sendeintervall),
+			logging(io_lib:format("~p@~p.log",[Name,Hostname]), "Neues Sendeintervall: " ++ to_String(Sendeintervall_neu) ++ " Sekunden"),
+			loop(Server, 0, Name,Own_Messages, Sendeintervall_neu)
 	end.

@@ -29,7 +29,7 @@ start() ->
 	{ok, Dlqlimit} = get_config_value(dlqlimit, ConfigListe),
 	{ok, Servername} = get_config_value(servername, ConfigListe),
 	
-	ets:new(server_config, [named_table, protected, set, {keypos,1}]),
+	ets:new(server_config, [named_table, public, set, {keypos,1}]),
 	
 	ets:insert(server_config, {lifetime, Lifetime}),
 	ets:insert(server_config, {clientlifetime, Clientlifetime}),
@@ -48,7 +48,7 @@ dropmessage(HBQ, Nachricht, Number) ->
 	%Systemzeit anhängen
 	New_Nachricht = Nachricht ++ " HBQ In: " ++ timeMilliSecond(),
 	New_HBQ = dict:store(Number, New_Nachricht, HBQ),
-    logging("NServer.log", io_lib:format(New_Nachricht ++ "~n",[])),
+    logging("NServer.log", io_lib:format(New_Nachricht ++ "-dropmessage ~n",[])),
 	New_HBQ.
 
 test() ->
@@ -84,7 +84,6 @@ check_dlq(DLQ, HBQ) ->
 			  % wenn ja, kleinste Nummer in DLQ löschen und durch neue Nachricht ersetzen
 			  true ->
 				Min = lists:min(dict:fetch_keys(DLQ)),
-		   		io:format("ÜBERSCHREIBE ALTE DATEI MIT NUMMER ~p~n~n",[Min]),
 			  	New_DLQ = dict:store(Next_number, New_Nachricht, dict:erase(Min, DLQ));
 			  % wenn nicht, Nachricht in DLQ speichern
 		  	  false ->
@@ -111,9 +110,19 @@ check_error(DLQ, HBQ, From, To) ->
 	case dict:is_key(To, HBQ) of
 		true ->
 			Fehler = "***Fehlernachricht fuer Nachrichtennummern " ++ to_String(From) ++ " bis " ++ to_String(To-1) ++ " um " ++ to_String(timeMilliSecond()),
-			New_DLQ = dict:append(To-1, Fehler, DLQ),
 			logging("NServer.log", io_lib:format(Fehler ++ "~n", [])),
-			New_DLQ;
+			
+			% prüfen, ob DLQ ihr Limit erreicht hat
+			[{_,Dlqlimit}] = ets:lookup(server_config, dlqlimit),
+			case dict:size(DLQ) >= Dlqlimit of
+			  % wenn ja, kleinste Nummer in DLQ löschen und durch neue Nachricht ersetzen
+			  true ->
+				Min = lists:min(dict:fetch_keys(DLQ)),
+			  	dict:store(To-1, Fehler, dict:erase(Min, DLQ));
+			  % wenn nicht, Nachricht in DLQ speichern
+		  	  false ->
+				dict:store(To-1, Fehler, DLQ)
+			end;
 		false ->
 			check_error(DLQ,HBQ,From,To+1)
 	end.
@@ -129,19 +138,20 @@ check_error(DLQ, HBQ) ->
 	end.
 
 getmessages(Client, Clients, DLQ) ->
-	%io:format("~n~n------------------------------------DLQ: ~p~n-------------------------------------------~n~n", [dict:fetch_keys(DLQ)]),
 	[{_, Sekunden}] = ets:lookup(server_config, clientlifetime),
 	% wenn DLQ keine Nachrichten enthält
 	case dict:size(DLQ) == 0 of
 		true ->
+		  	Nachricht = "Keine Eintraege vorhanden!",
+		    Antwort = {reply, -1, Nachricht, true},
+			Client ! Antwort,
+			logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
 		  	case dict:is_key(Client, Clients) of
 			  true ->
-		    	{ok,{_,Timer}} = dict:find(Client, Clients),
-			    Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
-		  		reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-			    Clients;
+		    	{ok,{Current,Timer}} = dict:find(Client, Clients),
+			    Resetted_Timer = reset_timer(Timer,Sekunden,{endoflifetime, Client}),
+			  	dict:store(Client, {Current,Resetted_Timer}, dict:erase(Client, Clients));
 			  false ->
-				Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
 				{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client}),
 				dict:store(Client, {0, New_Timer}, Clients)
 			end;
@@ -155,24 +165,31 @@ getmessages(Client, Clients, DLQ) ->
 					case Current == Max of
 						true ->
 							% schicke Fehlernachricht, da der Client keine weiteren Nachrichten lesen kann
-							reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-						  	Client ! {reply, -1, "Keine Eintraege vorhanden!", true},
-							Clients;
+							Nachricht = "Keine Eintraege vorhanden!",
+						  	Antwort = {reply, -1, Nachricht, true},
+			    			Client ! Antwort,
+			    			logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
+						  	Resetted_Timer = reset_timer(Timer,Sekunden,{endoflifetime, Client}),
+			  				dict:store(Client, {Current,Resetted_Timer}, dict:erase(Client, Clients));
 						false ->
 							% wenn nicht, suche nächste Nachricht in DLQ (get_next_message)
 							% Anwort besteht aus dem 4er Tupel {reply, Number, Nachricht, true/false}
 							Antwort = get_next_message(DLQ, Current+1, Max),
 							Client ! Antwort,
+							Nachricht = element(3,Antwort),
+							logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
 							% zuletzt gelesene Nachricht des Clients aktualisieren
-							reset_timer(Timer,Sekunden,{endoflifetime, Client}),
-							dict:store(Client, {element(2,Antwort),Timer}, dict:erase(Client, Clients))
+							Resetted_Timer = reset_timer(Timer,Sekunden,{endoflifetime, Client}),
+							dict:store(Client, {element(2,Antwort),Resetted_Timer}, dict:erase(Client, Clients))
 					end;
 				false ->
 					% kennt der Server den Client nicht, schickt er ihm die Nachricht mit kleinster Nummer
 					Min = lists:min(dict:fetch_keys(DLQ)),
 					{ok, Nachricht} = dict:find(Min, DLQ),
 					% wenn nur 1 Element in DLQ, lesen beenden (Terminated = true)
-					Client ! {reply, Min, Nachricht, dict:size(DLQ) == 1},
+					Antwort = {reply, Min, Nachricht, dict:size(DLQ) == 1},
+			    	Client ! Antwort,
+			    	logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
 					% Client in Dictionary speichern, damit er beim nächsten Aufruf bekannt ist
 					{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client}),
 					dict:store(Client, {Min, New_Timer}, Clients)
@@ -217,7 +234,12 @@ loop(Counter, HBQ, DLQ, Clients) ->
 		  	% evtl. Übertragen von Messages von HBQ nach DLQ
 			TMP_DLQ = check_dlq(DLQ, TMP_HBQ),
 		    % löschen der Nachrichten aus HBQ, die jetzt in der DLQ sind
-			New_HBQ = clear_hbq(lists:max(dict:fetch_keys(TMP_DLQ)),TMP_HBQ),
+			case dict:size(TMP_DLQ) == 0 of
+       			true ->
+        			New_HBQ = HBQ;
+      			false ->
+     				New_HBQ = clear_hbq(lists:max(dict:fetch_keys(TMP_DLQ)),TMP_HBQ)
+  			end,
 		   	logging("NServer.log", io_lib:format("HBQ: ~p DLQ: ~p~n", [dict:fetch_keys(New_HBQ),dict:fetch_keys(TMP_DLQ)])),
 		    New_DLQ = check_error(TMP_DLQ, New_HBQ),
 			loop(Counter,New_HBQ,New_DLQ, Clients);
@@ -225,9 +247,17 @@ loop(Counter, HBQ, DLQ, Clients) ->
 	   		Changed_Clients = getmessages(Client, Clients, DLQ),
 			loop(Counter, HBQ, DLQ, Changed_Clients);
 		{endoflifetime, Client} ->
-			loop(Counter, HBQ, DLQ, dict:erase(Client, Clients));
+	   		Client_vergessen = "Client " ++ to_String(Client) ++ " wird vergessen! *************",
+			logging("NServer.log", io_lib:format(Client_vergessen ++ "~n", [])),
+	   		loop(Counter, HBQ, DLQ, dict:erase(Client, Clients));
 		exit ->
-	   		shutdown(Clients)
+	   		shutdown(Clients),
+	   		case ets:delete(server_config) of
+		   		true ->
+			   		io:format("Server wurde erfolgreich beendet.~n",[]);
+			   	false ->
+			   		io:format("Fehler beim Entfernen der ets Tabellen~n",[])
+			end
 	end.
 
 
