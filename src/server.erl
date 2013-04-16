@@ -2,6 +2,9 @@
 %% @doc @todo Add description to server.
 
 
+%%vermutung auf aktuellen Fehler:
+% Die DLQ kann durch Fehlernachrichten über ihr Limit gefüllt werden!
+
 -module(server).
 -import(werkzeug, [to_String/1,timeMilliSecond/0,logging/2,get_config_value/2,reset_timer/3]).
 %% ====================================================================
@@ -81,6 +84,7 @@ check_dlq(DLQ, HBQ) ->
 			  % wenn ja, kleinste Nummer in DLQ löschen und durch neue Nachricht ersetzen
 			  true ->
 				Min = lists:min(dict:fetch_keys(DLQ)),
+		   		io:format("ÜBERSCHREIBE ALTE DATEI MIT NUMMER ~p~n~n",[Min]),
 			  	New_DLQ = dict:store(Next_number, New_Nachricht, dict:erase(Min, DLQ));
 			  % wenn nicht, Nachricht in DLQ speichern
 		  	  false ->
@@ -125,6 +129,7 @@ check_error(DLQ, HBQ) ->
 	end.
 
 getmessages(Client, Clients, DLQ) ->
+	%io:format("~n~n------------------------------------DLQ: ~p~n-------------------------------------------~n~n", [dict:fetch_keys(DLQ)]),
 	[{_, Sekunden}] = ets:lookup(server_config, clientlifetime),
 	% wenn DLQ keine Nachrichten enthält
 	case dict:size(DLQ) == 0 of
