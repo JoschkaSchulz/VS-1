@@ -213,6 +213,7 @@ get_next_message(DLQ, Current, Max) ->
 			get_next_message(DLQ, Current+1, Max)
 	end.
 
+% beende die Timer aller Clients
 shutdown(Clients) ->
 	case dict:size(Clients) == 0 of
 		true ->
@@ -224,6 +225,7 @@ shutdown(Clients) ->
 			shutdown(dict:erase(Client, Clients))
 	end.
 	
+% Endlosschleife des Servers
 loop(Counter, HBQ, DLQ, Clients) ->
 	receive
 		{getmsgid, Client} ->
@@ -249,10 +251,12 @@ loop(Counter, HBQ, DLQ, Clients) ->
 		{getmessages, Client} ->
 	   		Changed_Clients = getmessages(Client, Clients, DLQ),
 			loop(Counter, HBQ, DLQ, Changed_Clients);
+		% Client vergessen
 		{endoflifetime, Client} ->
 	   		Client_vergessen = "Client " ++ to_String(Client) ++ " wird vergessen! *************",
 			logging("NServer.log", io_lib:format(Client_vergessen ++ "~n", [])),
 	   		loop(Counter, HBQ, DLQ, dict:erase(Client, Clients));
+		% Server beenden
 		exit ->
 	   		shutdown(Clients),
 	   		case ets:delete(server_config) of
