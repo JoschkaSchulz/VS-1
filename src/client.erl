@@ -44,6 +44,9 @@ start_client(Number, Server, Sendeintervall, Lifetime) ->
 			Name = "client" ++ to_String(Number),
 			PID = spawn(fun() -> loop(Server, 0, Name, dict:new(), Sendeintervall) end),
 			%register(Name,PID),
+			{ok, Hostname} = inet:gethostname(),
+			logging(lists:append([[Name,"@",Hostname,".log"]]), io_lib:format("~s@~s Start: ~s~n",[Name,Hostname,timeMilliSecond()])),
+			% Timer für die Lebenszeit des Clients starten
 			timer:exit_after(Lifetime * 1000, PID, "End of Lifetime"),
 			start_client(Number-1, Server, Sendeintervall, Lifetime)
 	end.
@@ -59,8 +62,8 @@ get_msg_id(Server) ->
 % erzeuge die Nachricht als String
 create_message(Name, Number) -> 
 	{ok, Hostname} = inet:gethostname(),
-	Nachricht = to_String(Name) ++ "@" ++ Hostname ++ to_String(self()) ++ "-C-1-07: " ++ to_String(Number) ++ "te_Nachtricht. C Out: " ++ timeMilliSecond() ++ "(" ++ to_String(Number) ++ ");",
-	Nachricht. %io_lib:format(Nachricht ++ "~n", []).
+	lists:flatten(io_lib:format("~s@~s-C-1-07: ~p ~pte_Nachtricht. C Out: ~s (~p);", [Name, Hostname,self(),Number,timeMilliSecond(),Number])).
+	%Nachricht. %io_lib:format(Nachricht ++ "~n", []).
 
 % erfrage eine Message-ID und sende die Nachricht an den Server
 send_message(Server,Name,Own_Messages, Sendeintervall) ->
@@ -86,7 +89,7 @@ read_messages(Server, Name,Own_Messages) ->
 			case dict:is_key(Number, Own_Messages) of
 				% wenn die Message-ID vom eigenen Redakteur gesendet wurde, hänge ****** an
 				true ->
-					Is_own_msg = "*******";
+					Is_own_msg = " *******";
 				false ->
 					Is_own_msg = ""
 			end,
@@ -102,17 +105,20 @@ read_messages(Server, Name,Own_Messages) ->
 	end.
 
 % generiere die "Vergessen zu senden"-Nachricht
-msg_got_by_slender(Number) ->
-	Nachricht = to_String(Number) ++ "te_Nachtricht um " ++ timeMilliSecond() ++ "vergessen zu senden ******",
+message_lost(Number) ->
+	Nachricht = to_String(Number) ++ "te_Nachtricht um " ++ timeMilliSecond() ++ " vergessen zu senden ******",
 	io_lib:format(Nachricht ++ "~n", []).
 
+% berechne Sendeintervall neu
 calculate_interval(Sendeintervall) ->
+	random:seed(now()),
 	Faktor = case random:uniform(2) of
-    	1 -> -0.5;
-    	_ -> 0.5
+    	1 -> 0.5;
+    	_ -> -0.5
   	end,
   	Sendeintervall_neu = Sendeintervall + (Sendeintervall * Faktor),
 
+	% Sendeintervall darf nicht unter 1 fallen
   	case Sendeintervall_neu < 1 of
   		true -> 
 			1;
@@ -120,6 +126,7 @@ calculate_interval(Sendeintervall) ->
 			round(Sendeintervall_neu)
   	end.
 
+% Endlosschleife des Servers
 loop(Server, Counter, Name, Own_Messages, Sendeintervall) ->
 	% Redakteurclient
 	if Counter < 5 ->
@@ -129,10 +136,10 @@ loop(Server, Counter, Name, Own_Messages, Sendeintervall) ->
 	   	% Leseclient
 	   	true ->
 			{ok, Hostname} = inet:gethostname(),
-			Number = get_msg_id(Server),	% 11. Client vergisst die Nachricht
-			logging(lists:append([[Name,"@",Hostname,".log"]]), msg_got_by_slender(Number)),
+			Number = get_msg_id(Server),	% Client vergisst die Nachricht
+			logging(lists:append([Name,"@",Hostname,".log"]), message_lost(Number)),
 			read_messages(Server, Name,Own_Messages),
 			Sendeintervall_neu = calculate_interval(Sendeintervall),
-			logging(lists:append([[Name,"@",Hostname,".log"]]), "Neues Sendeintervall: " ++ to_String(Sendeintervall_neu) ++ " Sekunden"),
+			logging(lists:append([Name,"@",Hostname,".log"]), io_lib:format("Neues Sendeintervall: ~s Sekunden ~n", [to_String(Sendeintervall_neu)])),
 			loop(Server, 0, Name,Own_Messages, Sendeintervall_neu)
 	end.

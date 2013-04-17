@@ -18,17 +18,20 @@
 %% ====================================================================
 
 start() ->
+	
+	% erzeuge die Dictionaries
 	HBQ = dict:new(),
 	DLQ = dict:new(),
 	Clients = dict:new(),
 	
-	%Lade Server Konfiguration
+	% lade Server Konfiguration
 	{ok, ConfigListe} = file:consult("server.cfg"),
   	{ok, Lifetime} = get_config_value(lifetime, ConfigListe),
 	{ok, Clientlifetime} = get_config_value(clientlifetime, ConfigListe),
 	{ok, Dlqlimit} = get_config_value(dlqlimit, ConfigListe),
 	{ok, Servername} = get_config_value(servername, ConfigListe),
 	
+	% speichere Konfiguration in einer ets-Tabelle
 	ets:new(server_config, [named_table, public, set, {keypos,1}]),
 	
 	ets:insert(server_config, {lifetime, Lifetime}),
@@ -39,7 +42,9 @@ start() ->
 	%[{servername,SN}] = ets:lookup(config, servername),
 
 	PID = spawn(fun() -> loop(0, HBQ, DLQ, Clients) end),
-	register(Servername,PID),
+	register(Servername,PID), 
+	logging("NServer.log", io_lib:format("Server Startzeit: ~s mit PID ~s~n", [timeMilliSecond(),to_String(PID)])),
+	% Timer für die Lebenszeit des Servers starten
 	timer:send_after(Lifetime * 1000, PID, exit),
 	PID.
 
@@ -50,14 +55,6 @@ dropmessage(HBQ, Nachricht, Number) ->
 	New_HBQ = dict:store(Number, New_Nachricht, HBQ),
     logging("NServer.log", io_lib:format(New_Nachricht ++ "-dropmessage ~n",[])),
 	New_HBQ.
-
-test() ->
-	DLQ = dict:new(),
-	Tmp_HBQ = dict:new(),
-	HBQ = dict:store(0, "Test 0", dict:store(1, "Test 1", dict:store(3, "Test 3", Tmp_HBQ))),
-	New_DLQ = check_dlq(DLQ,HBQ),
-	New_HBQ = clear_hbq(lists:max(dict:fetch_keys(New_DLQ)),HBQ),
-	io:format("HBQ: ~p DLQ: ~p~n", [dict:fetch_keys(New_HBQ),dict:fetch_keys(New_DLQ)]).
 
 % evtl. Übertragen von Nachrichten von HBQ nach DLQ
 check_dlq(DLQ, HBQ) ->
@@ -77,7 +74,7 @@ check_dlq(DLQ, HBQ) ->
 			Tupel = dict:find(Next_number, HBQ),
 			Nachricht = element(2, Tupel),
 			%Systemzeit anhängen
-			New_Nachricht = Nachricht ++ " DLQ In: " ++ to_String(timeMilliSecond()),
+			New_Nachricht = Nachricht ++ " DLQ In: " ++ timeMilliSecond(),
 			% prüfen, ob DLQ ihr Limit erreicht hat
 			[{_,Dlqlimit}] = ets:lookup(server_config, dlqlimit),
 			case dict:size(DLQ) >= Dlqlimit of
@@ -106,10 +103,11 @@ clear_hbq(Max,HBQ) ->
 			clear_hbq(Max-1,dict:erase(Max, HBQ))
 	end.
 
+% prüfe, ob Fehlernachricht generiert werden muss
 check_error(DLQ, HBQ, From, To) ->
 	case dict:is_key(To, HBQ) of
 		true ->
-			Fehler = "***Fehlernachricht fuer Nachrichtennummern " ++ to_String(From) ++ " bis " ++ to_String(To-1) ++ " um " ++ to_String(timeMilliSecond()),
+			Fehler = io_lib:format("***Fehlernachricht fuer Nachrichtennummern ~p  bis ~p um ~s",[From,To-1,timeMilliSecond()]),
 			logging("NServer.log", io_lib:format(Fehler ++ "~n", [])),
 			
 			% prüfen, ob DLQ ihr Limit erreicht hat
@@ -127,6 +125,7 @@ check_error(DLQ, HBQ, From, To) ->
 			check_error(DLQ,HBQ,From,To+1)
 	end.
 		 	
+% prüfe, ob Fehlernachricht generiert werden muss (HBQ zu groß)
 check_error(DLQ, HBQ) ->
 	[{_,Dlqlimit}] = ets:lookup(server_config, dlqlimit),
 	case dict:size(HBQ) > Dlqlimit/2 of
@@ -137,6 +136,7 @@ check_error(DLQ, HBQ) ->
 			DLQ
 	end.
 
+% sende dem Client seine nächste zu lesende Nachricht
 getmessages(Client, Clients, DLQ) ->
 	[{_, Sekunden}] = ets:lookup(server_config, clientlifetime),
 	% wenn DLQ keine Nachrichten enthält
@@ -145,7 +145,7 @@ getmessages(Client, Clients, DLQ) ->
 		  	Nachricht = "Keine Eintraege vorhanden!",
 		    Antwort = {reply, -1, Nachricht, true},
 			Client ! Antwort,
-			logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
+			logging("NServer.log", io_lib:format(Nachricht ++ " -getmessages von ~p true~n", [Client])),
 		  	case dict:is_key(Client, Clients) of
 			  true ->
 		    	{ok,{Current,Timer}} = dict:find(Client, Clients),
@@ -168,7 +168,7 @@ getmessages(Client, Clients, DLQ) ->
 							Nachricht = "Keine Eintraege vorhanden!",
 						  	Antwort = {reply, -1, Nachricht, true},
 			    			Client ! Antwort,
-			    			logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
+			    			logging("NServer.log", io_lib:format(Nachricht ++ " -getmessages von ~p true~n", [Client])),
 						  	Resetted_Timer = reset_timer(Timer,Sekunden,{endoflifetime, Client}),
 			  				dict:store(Client, {Current,Resetted_Timer}, dict:erase(Client, Clients));
 						false ->
@@ -177,7 +177,8 @@ getmessages(Client, Clients, DLQ) ->
 							Antwort = get_next_message(DLQ, Current+1, Max),
 							Client ! Antwort,
 							Nachricht = element(3,Antwort),
-							logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
+							Terminated = element(4,Antwort),
+							logging("NServer.log", io_lib:format(Nachricht ++ " -getmessages von ~p ~p~n", [Client,Terminated])),
 							% zuletzt gelesene Nachricht des Clients aktualisieren
 							Resetted_Timer = reset_timer(Timer,Sekunden,{endoflifetime, Client}),
 							dict:store(Client, {element(2,Antwort),Resetted_Timer}, dict:erase(Client, Clients))
@@ -187,9 +188,10 @@ getmessages(Client, Clients, DLQ) ->
 					Min = lists:min(dict:fetch_keys(DLQ)),
 					{ok, Nachricht} = dict:find(Min, DLQ),
 					% wenn nur 1 Element in DLQ, lesen beenden (Terminated = true)
-					Antwort = {reply, Min, Nachricht, dict:size(DLQ) == 1},
+					Terminated = dict:size(DLQ) == 1,
+					Antwort = {reply, Min, Nachricht, Terminated},
 			    	Client ! Antwort,
-			    	logging("NServer.log", io_lib:format(Nachricht ++ " gesendet ~n", [])),
+			    	logging("NServer.log", io_lib:format(Nachricht ++ " -getmessages von ~p ~s~n", [Client, Terminated])),
 					% Client in Dictionary speichern, damit er beim nächsten Aufruf bekannt ist
 					{ok,New_Timer} = timer:send_after(Sekunden * 1000,{endoflifetime, Client}),
 					dict:store(Client, {Min, New_Timer}, Clients)
@@ -226,6 +228,7 @@ loop(Counter, HBQ, DLQ, Clients) ->
 	receive
 		{getmsgid, Client} ->
 			Client ! {nnr,Counter},
+			logging("NServer.log", io_lib:format("Nachrichtennummer ~p an ~p gesendet.~n",[Counter, Client])),
 			loop(Counter+1, HBQ, DLQ, Clients);
 		% Server empfängt Message
 		{dropmessage, {Nachricht, Number}} ->
